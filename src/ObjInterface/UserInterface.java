@@ -1,5 +1,5 @@
 package ObjInterface;
 
 public interface UserInterface {
-    void login();
+    int login(String code, String password);
 }
