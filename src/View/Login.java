@@ -29,6 +29,8 @@ public class Login extends JFrame {
 	private JPanel contentPane;
 	private JTextField inputUsername;
 	private JPasswordField inputPassword;
+	private JLabel lblValidateLogin;
+	private JButton btnLogin;
 	private JPanel panel_2;
 	static LoginController loginController = new LoginController();
 
@@ -111,32 +113,53 @@ public class Login extends JFrame {
         lblNewLabel_2.setBounds(460, 97, 250, 48);
         contentPane.add(lblNewLabel_2);
 
-        JButton btnLogin = new JButton("\u0110\u0102NG NH\u1EACP");
+        btnLogin = new JButton("\u0110\u0102NG NH\u1EACP");
         btnLogin.setFont(new Font("Times New Roman", Font.PLAIN, 16));
         btnLogin.setForeground(Color.WHITE);
         btnLogin.setBackground(new Color(47, 79, 79));
         btnLogin.setBounds(383, 462, 250, 43);
         contentPane.add(btnLogin);
 
-        JLabel lblValidateLogin = new JLabel();
+        lblValidateLogin = new JLabel();
         lblValidateLogin.setFont(new Font("Tahoma", Font.PLAIN, 12));
         lblValidateLogin.setForeground(Color.WHITE);
         lblValidateLogin.setBounds(293, 194, 417, 37);
         contentPane.add(lblValidateLogin);
 
-        btnLogin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                lblValidateLogin.setText("");
-                String code = inputUsername.getText();
-                String password = String.copyValueOf(inputPassword.getPassword());
-                System.out.println(loginController.login(code,password));
-                if(loginController.login(code,password) == 1){
-                    lblValidateLogin.setText("Đăng nhập thành công!");
-                }else{
-                    lblValidateLogin.setText("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng nhập lại !");
-                }
-            }
-        });
+
+//        btnLogin.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                lblValidateLogin.setText("");
+//                String code = inputUsername.getText();
+//                String password = String.copyValueOf(inputPassword.getPassword());
+//                System.out.println(loginController.login(code,password));
+//                if(loginController.login(code,password) == 1){
+//                    lblValidateLogin.setText("Đăng nhập thành công!");
+//                }else{
+//                    lblValidateLogin.setText("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng nhập lại !");
+//                }
+//            }
+//        });
 	}
+
+	public String [] getInputAccount(){
+        String code = inputUsername.getText();
+        String password = String.copyValueOf(inputPassword.getPassword());
+        return new String []{code, password};
+    }
+
+    public void messageLogin(int option){
+	   if(option == 1) {
+           lblValidateLogin.setText("Đăng nhập thành công!");
+       }
+	   if(option < 1) {
+           lblValidateLogin.setText("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng nhập lại !");
+       }
+    }
+
+    public void addLoginListener(ActionListener listener) {
+	    lblValidateLogin.setText("");
+        btnLogin.addActionListener(listener);
+    }
 }
