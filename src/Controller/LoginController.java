@@ -1,10 +1,14 @@
 package Controller;
 
+import DB.ClassroomDB;
 import Model.Authenticate;
+import View.ClassroomView;
 import View.Login;
+import Object.Classroom;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 public class LoginController {
 
@@ -28,8 +32,18 @@ public class LoginController {
         @Override
         public void actionPerformed(ActionEvent e) {
             String [] request = loginView.getInputAccount();
-            System.out.println(login(request[0], request[1]));
-            loginView.messageLogin(login(request[0], request[1]));
+            int loginStatus = login(request[0], request[1]);
+            if(loginStatus == 1){
+                ClassroomDB classroomDB = new ClassroomDB();
+                LinkedList<Classroom> cr = classroomDB.getListClass();
+                ClassroomView classroom = new ClassroomView(cr);
+                ClassroomsController classroomsController = new ClassroomsController(classroom);
+                classroomsController.index();
+                loginView.setVisible(false);
+            }else{
+                loginView.messageLogin(0);
+            }
+
         }
     }
 
