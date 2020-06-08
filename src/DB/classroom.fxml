@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<classrooms>
+    <classroom id='1'>
+        <name>CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT</name>
+        <code>amcnxvc</code>
+        <semester>2</semester>
+        <scholastic>2019-2020</scholastic>
+        <timetable>
+            <day>Thứ 3</day>
+            <time>8h - 13h</time>
+            <room>102T5</room>
+        </timetable>
+        <timetable>
+            <day>Thứ 5</day>
+            <time>13h - 15h</time>
+            <room>203T5</room>
+        </timetable>
+        <quantity>40</quantity>
+    </classroom>
+    <classroom id='2'>
+        <name>MẬT MÃ</name>
+        <code>asdsd</code>
+        <semester>2</semester>
+        <scholastic>2019-2020</scholastic>
+        <timetable>
+            <day>Thứ 4</day>
+            <time>8h - 10h</time>
+            <room>201T5</room>
+        </timetable>
+        <timetable>
+            <day>Thứ 6</day>
+            <time>8h - 10h</time>
+            <room>103T5</room>
+        </timetable>
+        <quantity>40</quantity>
+    </classroom>
+    <classroom id='3'>
+        <name>THIẾT KẾ VÀ ĐÁNH GIÁ THUẬT TOÁN</name>
+        <code>gkfljgf</code>
+        <semester>2</semester>
+        <scholastic>2019-2020</scholastic>
+        <timetable>
+            <day>Thứ 3</day>
+            <time>13h - 16h</time>
+            <room>409T5</room>
+        </timetable>
+        <timetable>
+            <day>Thứ 6</day>
+            <time>8h - 10h</time>
+            <room>311T5</room>
+        </timetable>
+        <quantity>40</quantity>
+    </classroom>
+    <classroom id='4'>
+        <name>PHÂN TÍCH THIẾT KẾ HỆ THỐNG</name>
+        <code>cvmnbmv</code>
+        <semester>2</semester>
+        <scholastic>2019-2020</scholastic>
+        <timetable>
+            <day>Thứ 2</day>
+            <time>10h - 12h</time>
+            <room>206T5</room>
+        </timetable>
+        <timetable>
+            <day>Thứ 4</day>
+            <time>10h - 12h</time>
+            <room>103T5</room>
+        </timetable>
+        <quantity>40</quantity>
+    </classroom>
+    <classroom id='5'>
+        <name>TỐI ƯU HOÁ</name>
+        <code>ngkh</code>
+        <semester>2</semester>
+        <scholastic>2019-2020</scholastic>
+        <timetable>
+            <day>Thứ 2</day>
+            <time>15h - 18h</time>
+            <room>206T5</room>
+        </timetable>
+        <timetable>
+            <day>Thứ 3</day>
+            <time>10h - 12h</time>
+            <room>103T5</room>
+        </timetable>
+        <quantity>40</quantity>
+    </classroom>
+    <classroom id='6'>
+        <name>LINUX</name>
+        <code>hgghg</code>
+        <semester>2</semester>
+        <scholastic>2019-2020</scholastic>
+        <timetable>
+            <day>Thứ 5</day>
+            <time>10h - 12h</time>
+            <room>206T5</room>
+        </timetable>
+        <timetable>
+            <day>Thứ 6</day>
+            <time>13h - 15h</time>
+            <room>103T5</room>
+        </timetable>
+        <quantity>40</quantity>
+    </classroom>
+</classrooms>
