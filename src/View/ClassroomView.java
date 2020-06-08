@@ -34,7 +34,7 @@ public class ClassroomView extends JFrame {
     }
 
     void initClassroom(LinkedList<Classroom> classrooms) {
-        setTitle("MSS - Lá»›p há»�c");
+        setTitle("MSS - Lớp học");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(-5, -5, 1400, 735);
         contentPane = new JPanel();
@@ -65,7 +65,7 @@ public class ClassroomView extends JFrame {
         btnNewButton.setBounds(1247, 581, 99, 38);
         panel_3.add(btnNewButton);
 
-        
+        //list lớp
         int d_box = 132;
         int c =0;
         for(Classroom cl: classrooms){
@@ -101,7 +101,7 @@ public class ClassroomView extends JFrame {
         lblNewLabel.setBounds(10, 11, 249, 21);
         panel.add(lblNewLabel);
 
-        JLabel lblNewLabel_1 = new JLabel("Há»�c kÃ¬ "+ c.getSemester()+", nÄƒm há»�c "+ c.getScholastic());
+        JLabel lblNewLabel_1 = new JLabel("Học kì "+ c.getSemester()+", năm học "+ c.getScholastic());
         lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 12));
         lblNewLabel_1.setForeground(Color.WHITE);
         lblNewLabel_1.setBounds(20, 35, 216, 14);
@@ -133,7 +133,7 @@ public class ClassroomView extends JFrame {
         lblNewLabel_10_3.setBounds(196, 184, 46, 14);
         panel_4.add(lblNewLabel_10_3);
 
-        JLabel lblNewLabel_2 = new JLabel("Lá»‹ch há»�c");
+        JLabel lblNewLabel_2 = new JLabel("Lịch học");
         lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 12));
         lblNewLabel_2.setBounds(10, 11, 60, 14);
         panel_4.add(lblNewLabel_2);
@@ -143,7 +143,7 @@ public class ClassroomView extends JFrame {
         lblNewLabel_17.setBounds(24, 33, 46, 14);
         panel_4.add(lblNewLabel_17);
 
-        JLabel lblNewLabel_4 = new JLabel("Thá»�i gian");
+        JLabel lblNewLabel_4 = new JLabel("Thời gian");
         lblNewLabel_4.setFont(new Font("Times New Roman", Font.BOLD, 13));
         lblNewLabel_4.setBounds(94, 33, 60, 14);
         panel_4.add(lblNewLabel_4);
@@ -180,7 +180,7 @@ public class ClassroomView extends JFrame {
         lblNewLabel_18.setBounds(10, 97, 109, 14);
         panel_4.add(lblNewLabel_18);
 
-        JLabel lblNewLabel_6 = new JLabel("40 sinh vi\u00EAn");
+        JLabel lblNewLabel_6 = new JLabel(c.getQuantity()+" sinh vi\u00EAn");
         lblNewLabel_6.setFont(new Font("Times New Roman", Font.PLAIN, 12));
         lblNewLabel_6.setBounds(119, 97, 84, 14);
         panel_4.add(lblNewLabel_6);
@@ -190,7 +190,7 @@ public class ClassroomView extends JFrame {
         lblNewLabel_7.setBounds(10, 122, 92, 14);
         panel_4.add(lblNewLabel_7);
 
-        JLabel lblNewLabel_8 = new JLabel("acnjkvgf");
+        JLabel lblNewLabel_8 = new JLabel(c.getCode());
         lblNewLabel_8.setFont(new Font("Times New Roman", Font.PLAIN, 12));
         lblNewLabel_8.setBounds(119, 122, 104, 14);
         panel_4.add(lblNewLabel_8);
@@ -203,9 +203,12 @@ public class ClassroomView extends JFrame {
         btnInside.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                clr = new ClassroomsController();
-//                clr.openClassroom(btnInside.getName());
-//                System.out.println(btnInside.getName());
+//                Test testView = new Test();
+//            	TestController classroomsController = new ClassroomsController(classroom);
+//              classroomsController.index();
+//          	
+//              System.out.println(btnInside.getName());
+                System.out.println(btnInside.getName());
             }
         });
 
