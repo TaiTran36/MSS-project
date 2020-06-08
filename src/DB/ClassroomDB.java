@@ -21,6 +21,8 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerFactory;
+
 import java.io.File;
 
 
@@ -31,16 +33,24 @@ public class ClassroomDB {
 //        this.classroom = classroom;
     }
 
-    public void createClassroom(String name, String code, String semester, String scholastic, int quantity, String [][] timeTables){
+    public void addClassroom(Classroom clr){
+    	File f = new File("src/DB/classroom.fxml");
 
-        LinkedList<TimeTable> timeTables1 = null;
-        TimeTable timeTable1 = new TimeTable(timeTables[0][0], timeTables[0][1], timeTables[0][2]);
-        TimeTable timeTable2 = new TimeTable(timeTables[1][0], timeTables[1][1], timeTables[1][2]);
-        timeTables1.add(timeTable1);
-        timeTables1.add(timeTable2);
-
-        Classroom classroom = new Classroom(name, code, semester, scholastic, quantity, timeTables1);
-        classrooms.add(classroom);
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder buider = null;
+        try {
+            buider = factory.newDocumentBuilder();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        }
+        Document doc = null;
+        try {
+            doc = buider.parse(f);
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
