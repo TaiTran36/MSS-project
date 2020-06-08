@@ -5,20 +5,20 @@ import ObjInterface.UserInterface;
 
 public class User implements UserInterface{
 
-    private String name, code, birthDay, job ,name_class;
+    private String name, code, birthDay, job ,code_class;
     private int age, permission;
 
     public User(){
 
     }
 
-    public User(String name, String code, String birthDay, int age, String job, String name_class){
+    public User(String name, String code, String birthDay, int age, String job, String code_class){
         this.name = name;
         this.code = code;
         this.birthDay = birthDay;
         this.age = age;
         this.job = job;
-        this.name_class = name_class;
+        this.code_class = code_class;
     }
 
     public String getName() {
@@ -69,12 +69,12 @@ public class User implements UserInterface{
         this.job = job;
     }
 
-    public String getName_class() {
-        return name_class;
+    public String getcode_class() {
+        return code_class;
     }
 
-    public void setName_class(String name_class) {
-        this.name_class = name_class;
+    public void setcode_class(String code_class) {
+        this.code_class = code_class;
     }
 
     public int login(String code, String password) {
