@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<classrooms>
-    <classroom id='1'>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><classrooms>
+    <classroom id="1">
         <name>C\u1EA4U TR\u00DAC D\u1EEE LI\u1EC6U V\u00C0 GI\u1EA2I THU\u1EACT</name>
         <code>amcnxvc</code>
         <semester>2</semester>
@@ -17,7 +16,7 @@
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='2'>
+    <classroom id="2">
         <name>Máº¬T MÃƒ</name>
         <code>asdsd</code>
         <semester>2</semester>
@@ -34,7 +33,7 @@
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='3'>
+    <classroom id="3">
         <name>THIáº¾T Káº¾ VÃ€ Ä�Ã�NH GIÃ� THUáº¬T TOÃ�N</name>
         <code>gkfljgf</code>
         <semester>2</semester>
@@ -51,7 +50,7 @@
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='4'>
+    <classroom id="4">
         <name>PHÃ‚N TÃ�CH THIáº¾T Káº¾ Há»† THá»�NG</name>
         <code>cvmnbmv</code>
         <semester>2</semester>
@@ -68,7 +67,7 @@
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='5'>
+    <classroom id="5">
         <name>Tá»�I Æ¯U HOÃ�</name>
         <code>ngkh</code>
         <semester>2</semester>
@@ -85,21 +84,4 @@
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='6'>
-        <name>LINUX</name>
-        <code>hgghg</code>
-        <semester>2</semester>
-        <scholastic>2019-2020</scholastic>
-        <timetable>
-            <day>Thá»© 5</day>
-            <time>10h - 12h</time>
-            <room>206T5</room>
-        </timetable>
-        <timetable>
-            <day>Thá»© 6</day>
-            <time>13h - 15h</time>
-            <room>103T5</room>
-        </timetable>
-        <quantity>40</quantity>
-    </classroom>
-</classrooms>
+<classroom><name>hihi</name><code>adas</code><semester>q</semester><scholastic>sads</scholastic><timetable><day>ds</day><time>ds</time><room>ds</room></timetable><timetable><day>ds</day><time>ds</time><room>ds</room></timetable><quantity>0</quantity></classroom></classrooms>

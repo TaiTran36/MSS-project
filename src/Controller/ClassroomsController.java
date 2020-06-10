@@ -3,6 +3,7 @@ package Controller;
 import DB.ClassroomDB;
 import View.ClassroomView;
 import View.PopupAddRoom;
+import View.RegisterCourse;
 import Object.Classroom;
 
 import java.awt.event.ActionEvent;
@@ -14,8 +15,9 @@ import Controller.LoginController.LoginListener;
 public class ClassroomsController {
 
     private ClassroomView classroomview;
-    private PopupAddRoom addRoom = new PopupAddRoom();
+    private RegisterCourse registerCourse = new RegisterCourse();
     private Classroom clr;
+    private ClassroomDB roomDB;
     public ClassroomsController(ClassroomView classroomview){
         this.classroomview = classroomview;
         classroomview.addAddCLassListener(new ClassroomListener());
@@ -29,8 +31,8 @@ public class ClassroomsController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-        	addRoom.setVisible(true);
-        	addRoom.addGetInfoRoomListener(new AddRoomListener());
+        	registerCourse.setVisible(true);
+        	registerCourse.addGetInfoRoomListener(new AddRoomListener());
         }
         
       
@@ -40,8 +42,12 @@ public class ClassroomsController {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			clr = addRoom.getInfoRoom();
-			System.out.println(clr.getName());
+			clr = registerCourse.getInfoRoom();
+			roomDB.addClassroom(clr);
+			registerCourse.setVisible(false);
+			LinkedList<Classroom> cr = roomDB.getListClass();
+			classroomview.initClassroom(cr);
+//			System.out.println(clr.getName());
 		}
     	
     }

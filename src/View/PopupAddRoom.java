@@ -149,7 +149,7 @@ public class PopupAddRoom extends JFrame {
 		arrtTime.add(timeTable1);
 		arrtTime.add(timeTable2);
 		
-		Classroom room = new Classroom(name,code, semester, scholastic, quantity, arrtTime);
+		Classroom room = new Classroom(name,code, semester, scholastic, arrtTime);
 		return room;
 		
 	}

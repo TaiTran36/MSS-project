@@ -5,9 +5,9 @@ import java.util.LinkedList;
 public class Classroom {
 
     private String name, code, semester, scholastic;
-    private int quantity;
+    private int quantity = 0;
     private LinkedList<TimeTable> timetables;
-    public Classroom(String name, String code, String semester, String scholastic, int quantity, LinkedList<TimeTable> timeTables){
+    public Classroom(String name, String code, String semester, String scholastic, LinkedList<TimeTable> timeTables){
         this.name = name;
         this.code = code;
         this.semester = semester;

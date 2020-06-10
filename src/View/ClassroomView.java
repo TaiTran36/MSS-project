@@ -34,7 +34,7 @@ public class ClassroomView extends JFrame {
 		initClassroom(classrooms);
 	}
 
-	void initClassroom(LinkedList<Classroom> classrooms) {
+	public void initClassroom(LinkedList<Classroom> classrooms) {
 		setTitle("MSS - Lá»›p há»�c");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(-5, -5, 1400, 735);
@@ -65,6 +65,9 @@ public class ClassroomView extends JFrame {
 		btnAddClass.setForeground(Color.WHITE);
 		btnAddClass.setBounds(1244, 569, 99, 38);
 		panel_3.add(btnAddClass);
+		if(classrooms.size() >= 6) {
+			btnAddClass.setEnabled(false);
+		}
 
 		// list lá»›p
 		int d_box = 132;

@@ -6,11 +6,17 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Object.Classroom;
+import Object.TimeTable;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 public class RegisterCourse extends JFrame {
 
@@ -25,30 +31,33 @@ public class RegisterCourse extends JFrame {
 	private JTextField textField_7;
 	private JTextField textField_8;
 	private JTextField textField_9;
+	private JButton btnAddRoom;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					RegisterCourse frame = new RegisterCourse();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					RegisterCourse frame = new RegisterCourse();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
+	public RegisterCourse() {
+		initRegisterCourse();
 	}
 
-	/**
-	 * Create the frame.
-	 */
-	public RegisterCourse() {
+	
+	void initRegisterCourse() {
 		setTitle("T\u1EA1o l\u1EDBp h\u1ECDc");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 587, 458);
+		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(0, 128, 128));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -146,11 +155,11 @@ public class RegisterCourse extends JFrame {
 		textField_9.setBounds(432, 320, 86, 31);
 		contentPane.add(textField_9);
 		
-		JButton btnNewButton = new JButton("T\u1EA1o l\u1EDBp");
-		btnNewButton.setBackground(new Color(47, 79, 79));
-		btnNewButton.setForeground(Color.WHITE);
-		btnNewButton.setBounds(207, 377, 171, 31);
-		contentPane.add(btnNewButton);
+		btnAddRoom = new JButton("T\u1EA1o l\u1EDBp");
+		btnAddRoom.setBackground(new Color(47, 79, 79));
+		btnAddRoom.setForeground(Color.WHITE);
+		btnAddRoom.setBounds(207, 377, 171, 31);
+		contentPane.add(btnAddRoom);
 		
 		JLabel lblNewLabel_1_1_1_2_1_1 = new JLabel("Ca h\u1ECDc");
 		lblNewLabel_1_1_1_2_1_1.setForeground(Color.WHITE);
@@ -171,5 +180,36 @@ public class RegisterCourse extends JFrame {
 		lblNewLabel_1_1_1_2_1_1_3_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_1_2_1_1_3_1.setBounds(348, 281, 74, 22);
 		contentPane.add(lblNewLabel_1_1_1_2_1_1_3_1);
+	}
+	
+	public Classroom getInfoRoom() {
+		String name = textField.getText();
+		String semester = textField_2.getText();
+		String scholastic = textField_3.getText();
+		String code = textField_1.getText();
+		
+		String day1 = textField_4.getText();
+		String time1 = textField_5.getText();
+		String room1 = textField_6.getText();
+		
+		TimeTable timeTable1 = new TimeTable(day1, time1, room1);
+		
+		String day2 = textField_7.getText();
+		String time2 = textField_8.getText();
+		String room2 = textField_9.getText();
+		
+		TimeTable timeTable2 = new TimeTable(day1, time1, room1);
+		
+		LinkedList <TimeTable> arrtTime = new LinkedList<TimeTable>();
+		arrtTime.add(timeTable1);
+		arrtTime.add(timeTable2);
+		
+		Classroom room = new Classroom(name,code, semester, scholastic, arrtTime);
+		return room;
+		
+	}
+	
+	public void addGetInfoRoomListener(ActionListener listener) {
+		btnAddRoom.addActionListener(listener);
 	}
 }
