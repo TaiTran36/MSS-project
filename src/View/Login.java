@@ -60,7 +60,6 @@ public class Login extends JFrame {
 	void initialize() {
 		setTitle("MSS");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 1000, 650);
         setLocationRelativeTo(null);
         contentPane = new JPanel();
@@ -135,9 +134,9 @@ public class Login extends JFrame {
 //                String password = String.copyValueOf(inputPassword.getPassword());
 //                System.out.println(loginController.login(code,password));
 //                if(loginController.login(code,password) == 1){
-//                    lblValidateLogin.setText("Đăng nhập thành công!");
+//                    lblValidateLogin.setText("Ä�Äƒng nháº­p thÃ nh cÃ´ng!");
 //                }else{
-//                    lblValidateLogin.setText("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng nhập lại !");
+//                    lblValidateLogin.setText("TÃªn Ä‘Äƒng nháº­p hoáº·c máº­t kháº©u khÃ´ng Ä‘Ãºng. Vui lÃ²ng nháº­p láº¡i !");
 //                }
 //            }
 //        });
@@ -151,10 +150,10 @@ public class Login extends JFrame {
 
     public void messageLogin(int option){
 	   if(option == 1) {
-           lblValidateLogin.setText("Đăng nhập thành công!");
+           lblValidateLogin.setText("Ä�Äƒng nháº­p thÃ nh cÃ´ng!");
        }
 	   if(option < 1) {
-           lblValidateLogin.setText("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng nhập lại !");
+           lblValidateLogin.setText("TÃªn Ä‘Äƒng nháº­p hoáº·c máº­t kháº©u khÃ´ng Ä‘Ãºng. Vui lÃ²ng nháº­p láº¡i !");
        }
     }
 

@@ -31,8 +31,13 @@ public class ClassroomsController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-        	registerCourse.setVisible(true);
-        	registerCourse.addGetInfoRoomListener(new AddRoomListener());
+        	if(roomDB.getListClass().size() >= 6) {
+				classroomview.disableButton();
+			}else {
+				registerCourse.setVisible(true);
+	        	registerCourse.addGetInfoRoomListener(new AddRoomListener());
+			}
+        	
         }
         
       
@@ -47,7 +52,7 @@ public class ClassroomsController {
 			registerCourse.setVisible(false);
 			LinkedList<Classroom> cr = roomDB.getListClass();
 			classroomview.initClassroom(cr);
-//			System.out.println(clr.getName());
+
 		}
     	
     }

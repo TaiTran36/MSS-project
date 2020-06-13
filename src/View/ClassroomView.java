@@ -65,9 +65,6 @@ public class ClassroomView extends JFrame {
 		btnAddClass.setForeground(Color.WHITE);
 		btnAddClass.setBounds(1244, 569, 99, 38);
 		panel_3.add(btnAddClass);
-		if(classrooms.size() >= 6) {
-			btnAddClass.setEnabled(false);
-		}
 
 		// list lá»›p
 		int d_box = 132;
@@ -209,9 +206,6 @@ public class ClassroomView extends JFrame {
 				JoinCourse joinCourseView = new JoinCourse();
 				JoinCourseController joincourseController = new JoinCourseController(joinCourseView);
 				joincourseController.index();
-
-				System.out.println(btnInside.getName());
-				System.out.println(btnInside.getName());
 			}
 		});
 
@@ -220,5 +214,9 @@ public class ClassroomView extends JFrame {
 	 public void addAddCLassListener(ActionListener listener) {
 		  
 		 btnAddClass.addActionListener(listener);
-	    }
+	 }
+	 
+	 public void disableButton() {
+		 btnAddClass.setEnabled(false);
+	 }
 }
