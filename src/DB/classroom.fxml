@@ -1,105 +1,87 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<classrooms>
-    <classroom id='1'>
-        <name>CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT</name>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><classrooms>
+    <classroom id="1">
+        <name>C\u1EA4U TR\u00DAC D\u1EEE LI\u1EC6U V\u00C0 GI\u1EA2I THU\u1EACT</name>
         <code>amcnxvc</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
-            <day>Thứ 3</day>
+            <day>Thá»© 3</day>
             <time>8h - 13h</time>
             <room>102T5</room>
         </timetable>
         <timetable>
-            <day>Thứ 5</day>
+            <day>Thá»© 5</day>
             <time>13h - 15h</time>
             <room>203T5</room>
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='2'>
-        <name>MẬT MÃ</name>
+    <classroom id="2">
+        <name>Máº¬T MÃƒ</name>
         <code>asdsd</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
-            <day>Thứ 4</day>
+            <day>Thá»© 4</day>
             <time>8h - 10h</time>
             <room>201T5</room>
         </timetable>
         <timetable>
-            <day>Thứ 6</day>
+            <day>Thá»© 6</day>
             <time>8h - 10h</time>
             <room>103T5</room>
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='3'>
-        <name>THIẾT KẾ VÀ ĐÁNH GIÁ THUẬT TOÁN</name>
+    <classroom id="3">
+        <name>THIáº¾T Káº¾ VÃ€ Ä�Ã�NH GIÃ� THUáº¬T TOÃ�N</name>
         <code>gkfljgf</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
-            <day>Thứ 3</day>
+            <day>Thá»© 3</day>
             <time>13h - 16h</time>
             <room>409T5</room>
         </timetable>
         <timetable>
-            <day>Thứ 6</day>
+            <day>Thá»© 6</day>
             <time>8h - 10h</time>
             <room>311T5</room>
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='4'>
-        <name>PHÂN TÍCH THIẾT KẾ HỆ THỐNG</name>
+    <classroom id="4">
+        <name>PHÃ‚N TÃ�CH THIáº¾T Káº¾ Há»† THá»�NG</name>
         <code>cvmnbmv</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
-            <day>Thứ 2</day>
+            <day>Thá»© 2</day>
             <time>10h - 12h</time>
             <room>206T5</room>
         </timetable>
         <timetable>
-            <day>Thứ 4</day>
+            <day>Thá»© 4</day>
             <time>10h - 12h</time>
             <room>103T5</room>
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='5'>
-        <name>TỐI ƯU HOÁ</name>
+    <classroom id="5">
+        <name>Tá»�I Æ¯U HOÃ�</name>
         <code>ngkh</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
-            <day>Thứ 2</day>
+            <day>Thá»© 2</day>
             <time>15h - 18h</time>
             <room>206T5</room>
         </timetable>
         <timetable>
-            <day>Thứ 3</day>
+            <day>Thá»© 3</day>
             <time>10h - 12h</time>
             <room>103T5</room>
         </timetable>
         <quantity>40</quantity>
     </classroom>
-    <classroom id='6'>
-        <name>LINUX</name>
-        <code>hgghg</code>
-        <semester>2</semester>
-        <scholastic>2019-2020</scholastic>
-        <timetable>
-            <day>Thứ 5</day>
-            <time>10h - 12h</time>
-            <room>206T5</room>
-        </timetable>
-        <timetable>
-            <day>Thứ 6</day>
-            <time>13h - 15h</time>
-            <room>103T5</room>
-        </timetable>
-        <quantity>40</quantity>
-    </classroom>
-</classrooms>
+<classroom><name>hi</name><code>naskd</code><semester>sa</semester><scholastic>asd</scholastic><timetable><day>kwd</day><time>sd</time><room>sd</room></timetable><timetable><day>kwd</day><time>sd</time><room>sd</room></timetable><quantity>0</quantity></classroom></classrooms>
