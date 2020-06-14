@@ -154,62 +154,6 @@ public class StudentDB {
                 
             	students.appendChild(student);
             }
-    		
-//    		Element name = doc.createElement("name");
-//    		name.appendChild(doc.createTextNode(stu.getName()));
-//    		
-//    		Element code = doc.createElement("code");
-//    		code.appendChild(doc.createTextNode(stu.getCode()));
-//    		
-//    		Element semester = doc.createElement("semester");
-//    		semester.appendChild(doc.createTextNode(stu.getSemester()));
-//    		
-//    		Element scholastic = doc.createElement("scholastic");
-//    		scholastic.appendChild(doc.createTextNode(stu.getScholastic()));
-//    		
-//    		Element timetable1 = doc.createElement("timetable");
-//    		Element day1 = doc.createElement("day");
-//    		day1.appendChild(doc.createTextNode(stu.getTimetables().get(0).getDay()));
-//    		
-//    		Element time1 = doc.createElement("time");
-//    		time1.appendChild(doc.createTextNode(stu.getTimetables().get(0).getTime()));
-//    		
-//    		Element room1 = doc.createElement("room");
-//    		room1.appendChild(doc.createTextNode(stu.getTimetables().get(0).getRoom()));
-//    		
-//    		timetable1.appendChild(day1);
-//    		timetable1.appendChild(time1);
-//    		timetable1.appendChild(room1);
-//    		
-//    		Element timetable2 = doc.createElement("timetable");
-//    		Element day2 = doc.createElement("day");
-//    		day2.appendChild(doc.createTextNode(clr.getTimetables().get(0).getDay()));
-//    		
-//    		Element time2 = doc.createElement("time");
-//    		time2.appendChild(doc.createTextNode(clr.getTimetables().get(0).getTime()));
-//    		
-//    		Element room2 = doc.createElement("room");
-//    		room2.appendChild(doc.createTextNode(clr.getTimetables().get(0).getRoom()));
-//    		
-//    		timetable2.appendChild(day2);
-//    		timetable2.appendChild(time2);
-//    		timetable2.appendChild(room2);
-//    		
-//    		Element quantity = doc.createElement("quantity");
-//    		quantity.appendChild(doc.createTextNode(String.valueOf(clr.getQuantity())));
-//    		
-//    		classroom.appendChild(name);
-//    		classroom.appendChild(code);
-//    		classroom.appendChild(semester);
-//    		classroom.appendChild(scholastic);
-//    		classroom.appendChild(timetable1);
-//    		classroom.appendChild(timetable2);
-//    		classroom.appendChild(quantity);
-//
-//    		
-//    		classrooms.appendChild(classroom);
-    		
-    		
     		TransformerFactory transformerFactory = TransformerFactory.newInstance();
     		Transformer transformer = transformerFactory.newTransformer();
     		DOMSource source = new DOMSource(doc);
@@ -231,8 +175,123 @@ public class StudentDB {
 		e.printStackTrace();
 	}
 
+}
+    
+    public static void deleteStudent(String id, String code_root) {
+    	try {
+    		String filepath = "src/DB/student.fxml";
+    		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+    		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+    		Document doc = docBuilder.parse(filepath);
+    		
+    		Element students = doc.getDocumentElement();
+
+            NodeList studentList = students.getElementsByTagName("student");
+            
+            for (int i = 0; i < studentList.getLength(); i++) {
+                Node node = studentList.item(i);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element student = (Element) node;
+                    String s = student.getAttributes().getNamedItem("id").getTextContent();
+                    if(s.equals(id)) {
+                    	NodeList courseList = student.getElementsByTagName("course");
+                    	int countRoom = 0;
+                    	if(courseList.getLength() > 1) {
+                    		for (int j = 0; j < courseList.getLength(); j++) {
+                                Node nodeCourse = courseList.item(j);
+                                if (nodeCourse.getNodeType() == Node.ELEMENT_NODE) {
+                                    Element room = (Element) nodeCourse;
+                                    if(room.getElementsByTagName("code_room").item(0).getTextContent().equals(code_root)){
+                                    	student.removeChild(room);
+                                    }
+                                }
+                        	}
+                    	}else {
+                    		students.removeChild(student);
+                    	}
+                    	
+                    }
+                }
+            }
+            
+
+    		TransformerFactory transformerFactory = TransformerFactory.newInstance();
+    		Transformer transformer = transformerFactory.newTransformer();
+    		DOMSource source = new DOMSource(doc);
+    		StreamResult result = new StreamResult(new File(filepath));
+    		transformer.transform(source, result);
+
+    		
+	    	}catch (ParserConfigurationException pce) {
+	    		pce.printStackTrace();
+	 	   } catch (IOException ioe) {
+	 		ioe.printStackTrace();
+	 	   } catch (SAXException sae) {
+	 		sae.printStackTrace();
+	 	   } catch (TransformerConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	 	   } catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	 	   }
     }
     
+    public static void editStudent(Student stu, String code_root) {
+    	try {
+    		String filepath = "src/DB/student.fxml";
+    		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+    		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+    		Document doc = docBuilder.parse(filepath);
+    		
+    		Element students = doc.getDocumentElement();
+
+            NodeList studentList = students.getElementsByTagName("student");
+            for (int i = 0; i < studentList.getLength(); i++) {
+                Node node = studentList.item(i);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element student = (Element) node;
+                    String s = student.getAttributes().getNamedItem("id").getTextContent();
+                    if(s.equals(stu.getCode())) {
+                    	NodeList courseList = student.getElementsByTagName("course");
+                    	for (int j = 0; j < courseList.getLength(); j++) {
+                            Node nodeCourse = courseList.item(j);
+                            if (nodeCourse.getNodeType() == Node.ELEMENT_NODE) {
+                                Element room = (Element) nodeCourse;
+                                if(room.getElementsByTagName("code_room").item(0).getTextContent().equals(code_root)){
+                                	room.getElementsByTagName("numOfAbsences").item(0).setTextContent(String.valueOf(stu.getRoom().get(0).getNumOfAbsences()));
+                                	room.getElementsByTagName("scoreAttendance").item(0).setTextContent(String.valueOf(stu.getRoom().get(0).getNumOfAbsences()));
+                                	room.getElementsByTagName("scoreMidTerm").item(0).setTextContent(String.valueOf(stu.getRoom().get(0).getNumOfAbsences()));
+                                	room.getElementsByTagName("scoreEndTerm").item(0).setTextContent(String.valueOf(stu.getRoom().get(0).getNumOfAbsences()));
+                                }
+                            }
+                    	}
+                    }
+                }
+            }
+            
+
+    		TransformerFactory transformerFactory = TransformerFactory.newInstance();
+    		Transformer transformer = transformerFactory.newTransformer();
+    		DOMSource source = new DOMSource(doc);
+    		StreamResult result = new StreamResult(new File(filepath));
+    		transformer.transform(source, result);
+
+    		
+	    	}catch (ParserConfigurationException pce) {
+	    		pce.printStackTrace();
+	 	   } catch (IOException ioe) {
+	 		ioe.printStackTrace();
+	 	   } catch (SAXException sae) {
+	 		sae.printStackTrace();
+	 	   } catch (TransformerConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	 	   } catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	 	   }
+    }
     
     public static LinkedList<Student> getListClass(String code_root) {
     	LinkedList<Student> stdOfCourse = new LinkedList<>();//tree

@@ -12,6 +12,7 @@ import Controller.ClassroomsController.ClassroomListener;
 import DB.ClassroomDB;
 import DB.StudentDB;
 import View.CourseView;
+import View.PopupActionStudent;
 import View.PopupAddStudent;
 import Object.Classroom;
 import Object.Student;
@@ -21,6 +22,7 @@ public class CourseController {
 	private String cr;
 	private Student std;
 	private PopupAddStudent popupView ;
+	private PopupActionStudent popupAction;
 	 
 	 
 	 public CourseController(CourseView courseView){
@@ -32,9 +34,6 @@ public class CourseController {
 	    public void index(String code_root){
 	    	cr = code_root;
 	    	courseView.setVisible(true);
-//	    	for (Student st : courseDB.getListClass(code_root)) {
-//				System.out.println(st.getName());
-//			}
 	    	
 	    }
 	    class CourseListener implements ListSelectionListener {
@@ -45,12 +44,10 @@ public class CourseController {
 				 if (e.getValueIsAdjusting()) {
 				        return;
 				 }else {
-					 System.out.println("123");
+					 ActionController actionController = new ActionController();
+					 actionController.index( courseView.getStudentFromSelectedRow(cr), cr);
 				 }
 			}
-
-	    
-	        
 	      
 	    }
 	    
@@ -71,12 +68,12 @@ public class CourseController {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-			
 				std = popupView.getInfoStudent();
 				courseDB.addStudent(std, cr);
 				popupView.setVisible(false);
 				LinkedList<Student> s = courseDB.getListClass(cr);
-				courseView.initCourseView(s);
+				courseView.setEditStudent(s);
+				
 			}
 	    }
 	

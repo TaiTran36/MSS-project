@@ -11,6 +11,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
+import Object.Course;
 import Object.Student;
 
 import javax.swing.JLabel;
@@ -43,15 +44,15 @@ import javax.swing.JTabbedPane;
 public class CourseView extends JFrame {
 
 	private JPanel contentPane;
-	private JTable table;
+	private static JTable table;
 	private JButton btnAddStu;
 	
 
 //	private Vector<String> vctHeader = new Vector<String>();
 //	private Vector<Vector<String>> vctData = new Vector<Vector<String>>();
 	
-	private String [] columnNames = new String [] {
-            "MSV", "Họ và tên", "Ngày sinh", "Địa chỉ", "Số buổi vắng", "ĐIểm thường xuyên", "Điểm giữa kì", "Điểm cuối kì", "Điểm trung bình"};
+	private static String [] columnNames = new String [] {
+            "MSV", "Há»� vÃ  tÃªn", "NgÃ y sinh", "Ä�á»‹a chá»‰", "Sá»‘ buá»•i váº¯ng", "Ä�Iá»ƒm thÆ°á»�ng xuyÃªn", "Ä�iá»ƒm giá»¯a kÃ¬", "Ä�iá»ƒm cuá»‘i kÃ¬", "Ä�iá»ƒm trung bÃ¬nh"};
 	
 	private Object data = new Object [][] {
 		
@@ -178,12 +179,12 @@ public class CourseView extends JFrame {
 		
 		
 		
-		JLabel lblNewLabel_2 = new JLabel("Danh sách sinh viên lớp");
+		JLabel lblNewLabel_2 = new JLabel("Danh sÃ¡ch sinh viÃªn lá»›p");
 		lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblNewLabel_2.setBounds(367, 78, 865, 39);
 		contentPane.add(lblNewLabel_2);
 		
-		btnAddStu = new JButton("Thêm sinh viên");
+		btnAddStu = new JButton("ThÃªm sinh viÃªn");
 		btnAddStu.setBackground(new Color(0, 128, 128));
 		btnAddStu.setForeground(Color.WHITE);
 		btnAddStu.setBounds(1180, 644, 138, 41);
@@ -202,5 +203,38 @@ public class CourseView extends JFrame {
 		
 	 }
 	 
-	 
+	 public static void setEditStudent(LinkedList<Student>student) {
+		 Object [][] students = new Object[student.size()][9];
+			for (int i = 0; i < student.size(); i++) {
+				students[i][0] = student.get(i).getCode();
+				students[i][1] = student.get(i).getName();
+				students[i][2] = student.get(i).getDateOfBirth();
+				students[i][3] = student.get(i).getAddress();
+				students[i][4] = student.get(i).getRoom().get(0).getNumOfAbsences();
+				students[i][5] = student.get(i).getRoom().get(0).getScoreAttendance();
+				students[i][6] = student.get(i).getRoom().get(0).getScoreMidTerm();
+				students[i][7] = student.get(i).getRoom().get(0).getScoreEndTerm();
+				students[i][8] = student.get(i).getRoom().get(0).getScore();
+	        }
+		 table.setModel(new DefaultTableModel(students,columnNames));
+	 }
+	 public static Student getStudentFromSelectedRow(String code_root) {
+		 Student std = null;
+		 int row = table.getSelectedRow();
+	        if (row >= 0) {
+	        	Course c = new Course(Double.parseDouble(table.getModel().getValueAt(row, 8).toString()), Integer.parseInt(table.getModel().getValueAt(row, 4).toString()),Double.parseDouble(table.getModel().getValueAt(row, 5).toString()),Double.parseDouble(table.getModel().getValueAt(row, 6).toString()),Double.parseDouble(table.getModel().getValueAt(row, 7).toString()));
+	        	LinkedList<Course> courses = new LinkedList<Course>();
+	        	courses.add(c);
+	        	std = new Student(table.getModel().getValueAt(row, 1).toString(),table.getModel().getValueAt(row, 0).toString(), table.getModel().getValueAt(row, 2).toString(), table.getModel().getValueAt(row, 3).toString(), courses);
+	        }
+	    return std; 
+	 }
+	 public static String  getIdStudent() {
+		 String id  = "";
+		 int row = table.getSelectedRow();
+		 if (row >= 0) {
+			id = table.getModel().getValueAt(row, 0).toString();
+		 }
+		 return id;
+	 }
 }
