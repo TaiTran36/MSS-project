@@ -21,10 +21,6 @@ public class Student implements UserInterface, Comparator<Student>{
 
 	}
 
-
-	
-
-
 	public String getName() {
 		return name;
 	}

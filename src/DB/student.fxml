@@ -154,7 +154,7 @@
             <scoreMidTerm>23</scoreMidTerm>
             <scoreEndTerm>232</scoreEndTerm>
         </course>
-    </student>
+    <course><code_room>MAT01</code_room><score>3.0</score><numOfAbsences>3</numOfAbsences><scoreAttendance>3.0</scoreAttendance><scoreMidTerm>3.0</scoreMidTerm><scoreEndTerm>3.0</scoreEndTerm></course></student>
     <student id="16003437">
         <name>NGUYỄN THỊ KIỀU TRANG 5</name>
         <code>amcnxvc</code>
@@ -441,4 +441,4 @@
             <scoreEndTerm>232</scoreEndTerm>
         </course>
     </student>
-<student id="16001222"><name>hihi</name><code>16001222</code><dateOfBirth>hihi</dateOfBirth><address>amdsa</address><course><code_room>MAT02</code_room><score>2.0</score><numOfAbsences>2</numOfAbsences><scoreAttendance>2.0</scoreAttendance><scoreMidTerm>2.0</scoreMidTerm><scoreEndTerm>2.0</scoreEndTerm></course></student></students>
+<student id="16001222"><name>hihi</name><code>16001222</code><dateOfBirth>hihi</dateOfBirth><address>amdsa</address><course><code_room>MAT02</code_room><score>2.0</score><numOfAbsences>4</numOfAbsences><scoreAttendance>4</scoreAttendance><scoreMidTerm>4</scoreMidTerm><scoreEndTerm>4</scoreEndTerm></course></student><student id="16001121"><name>dsadsa</name><code>16001121</code><dateOfBirth>dsadsa</dateOfBirth><address>dá</address></student><student id="16003536"><name>sfsd</name><code>16003536</code><dateOfBirth>sfsd</dateOfBirth><address>fds</address><course><code_room>MAT01</code_room><score>2.0</score><numOfAbsences>6</numOfAbsences><scoreAttendance>2.0</scoreAttendance><scoreMidTerm>2.0</scoreMidTerm><scoreEndTerm>2.0</scoreEndTerm></course></student><student id="16003000"><name>huhu</name><code>16003000</code><dateOfBirth>huhu</dateOfBirth><address>đas</address><course><code_room>MAT02</code_room><score>3.0</score><numOfAbsences>3</numOfAbsences><scoreAttendance>3.0</scoreAttendance><scoreMidTerm>3.0</scoreMidTerm><scoreEndTerm>3.0</scoreEndTerm></course></student><student id="16001238"><name>sads</name><code>16001238</code><dateOfBirth>sads</dateOfBirth><address>dsd</address></student></students>
