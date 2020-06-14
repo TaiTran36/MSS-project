@@ -70,7 +70,7 @@ public class RegisterCourse extends JFrame {
 		lblNewLabel.setBounds(207, 11, 196, 22);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("T\u1EBFn l\u1EDBp h\u1ECDc ");
+		JLabel lblNewLabel_1 = new JLabel("T\u00EAn l\u1EDBp h\u1ECDc ");
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setBounds(36, 58, 72, 22);
 		contentPane.add(lblNewLabel_1);

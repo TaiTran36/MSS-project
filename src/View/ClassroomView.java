@@ -199,6 +199,7 @@ public class ClassroomView extends JFrame {
 		btnInside.setName(c.getCode());
 		btnInside.setBackground(new Color(0, 139, 139));
 		btnInside.setBounds(190, 140, 80, 40);
+		btnInside.setForeground(Color.WHITE);
 		panel_4.add(btnInside);
 		btnInside.addActionListener(new ActionListener() {
 			@Override
