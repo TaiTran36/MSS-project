@@ -20,7 +20,7 @@ import java.awt.event.WindowAdapter;
 public class JoinCourse extends JFrame {
 
 	private JPanel contentPane;
-
+	private JButton btnJoin;
 	/**
 	 * Launch the application.
 	 */
@@ -57,7 +57,7 @@ public class JoinCourse extends JFrame {
 			}
 		});
 
-		JButton btnJoin = new JButton("Tham gia");
+		btnJoin = new JButton("Tham gia");
 		btnJoin.setBackground(new Color(47, 79, 79));
 		btnJoin.setForeground(Color.WHITE);
 		btnJoin.setBounds(190, 151, 89, 33);
@@ -69,4 +69,9 @@ public class JoinCourse extends JFrame {
 			}
 		});
 	}
+	
+	public void addJoinCourseListener(ActionListener listener) {
+		  
+		btnJoin.addActionListener(listener);
+	 }
 }

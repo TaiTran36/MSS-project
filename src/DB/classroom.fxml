@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><classrooms>
     <classroom id="1">
         <name>C\u1EA4U TR\u00DAC D\u1EEE LI\u1EC6U V\u00C0 GI\u1EA2I THU\u1EACT</name>
-        <code>amcnxvc</code>
+        <code>MAT01</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
@@ -18,7 +18,7 @@
     </classroom>
     <classroom id="2">
         <name>Máº¬T MÃƒ</name>
-        <code>asdsd</code>
+        <code>MAT02</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
@@ -35,7 +35,7 @@
     </classroom>
     <classroom id="3">
         <name>THIáº¾T Káº¾ VÃ€ Ä�Ã�NH GIÃ� THUáº¬T TOÃ�N</name>
-        <code>gkfljgf</code>
+        <code>MAT03</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
@@ -52,7 +52,7 @@
     </classroom>
     <classroom id="4">
         <name>PHÃ‚N TÃ�CH THIáº¾T Káº¾ Há»† THá»�NG</name>
-        <code>cvmnbmv</code>
+        <code>MAT04</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
@@ -69,7 +69,7 @@
     </classroom>
     <classroom id="5">
         <name>Tá»�I Æ¯U HOÃ�</name>
-        <code>ngkh</code>
+        <code>MAT05</code>
         <semester>2</semester>
         <scholastic>2019-2020</scholastic>
         <timetable>
@@ -84,4 +84,4 @@
         </timetable>
         <quantity>40</quantity>
     </classroom>
-<classroom><name>hi</name><code>naskd</code><semester>sa</semester><scholastic>asd</scholastic><timetable><day>kwd</day><time>sd</time><room>sd</room></timetable><timetable><day>kwd</day><time>sd</time><room>sd</room></timetable><quantity>0</quantity></classroom></classrooms>
+</classrooms>
