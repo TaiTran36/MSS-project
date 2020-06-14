@@ -205,7 +205,7 @@ public class ClassroomView extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				JoinCourse joinCourseView = new JoinCourse();
 				JoinCourseController joincourseController = new JoinCourseController(joinCourseView);
-				joincourseController.index();
+				joincourseController.index(c.getCode());
 			}
 		});
 
