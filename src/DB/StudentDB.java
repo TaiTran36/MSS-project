@@ -112,7 +112,7 @@ public class StudentDB {
         		code.appendChild(doc.createTextNode(stu.getCode()));
         		
         		Element dateOfBirth = doc.createElement("dateOfBirth");
-        		dateOfBirth.appendChild(doc.createTextNode(stu.getName()));
+        		dateOfBirth.appendChild(doc.createTextNode(stu.getDateOfBirth()));
         		
         		Element address = doc.createElement("address");
         		address.appendChild(doc.createTextNode(stu.getAddress()));
