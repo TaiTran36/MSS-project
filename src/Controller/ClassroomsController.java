@@ -1,6 +1,5 @@
 package Controller;
 
-import DB.ClassroomDB;
 import View.ClassroomView;
 import View.PopupAddRoom;
 import View.RegisterCourse;
@@ -11,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.LinkedList;
 
 import Controller.LoginController.LoginListener;
+import Model.ClassroomDB;
 
 public class ClassroomsController {
 
@@ -48,11 +48,15 @@ public class ClassroomsController {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			clr = registerCourse.getInfoRoom();
-			roomDB.addClassroom(clr);
-			registerCourse.setVisible(false);
-			LinkedList<Classroom> cr = roomDB.getListClass();
-			classroomview.initClassroom(cr);
-
+			int result = roomDB.addClassroom(clr);
+			System.out.println(result);
+			if(result == 1) {
+				registerCourse.setVisible(false);
+				LinkedList<Classroom> cr = roomDB.getListClass();
+				classroomview.initClassroom(cr);
+			}else {
+				registerCourse.setMess();
+			}
 		}
     	
     }

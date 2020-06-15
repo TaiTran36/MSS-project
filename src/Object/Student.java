@@ -8,7 +8,7 @@ import ObjInterface.UserInterface;
 public class Student implements UserInterface{
 
 	
-	private String name, code, dateOfBirth, address;
+	public String name, code, dateOfBirth, address;
 	private LinkedList<Course> room;
 	
 	

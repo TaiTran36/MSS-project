@@ -6,7 +6,9 @@ import java.util.LinkedList;
 
 import Controller.ActionController.EditListener;
 import Controller.CourseController.AddStudentListener;
-import DB.StudentDB;
+import Model.HeapSort;
+import Model.SortedArrayPriorityQueue;
+import Model.StudentDB;
 import Object.Student;
 import View.CourseView;
 import View.PopupActionStudent;
@@ -39,7 +41,7 @@ public class EditController {
 				// TODO Auto-generated method stub
 					Student stu = editView.getEditStudent();
 					courseDB.editStudent(stu, cr);
-					LinkedList<Student> s = courseDB.getListClass(cr);
+					SortedArrayPriorityQueue s = courseDB.getListClass(cr);
 					courseView.setEditStudent(s);
 					editView.setVisible(false);
 //					actionView.setVisible(false);

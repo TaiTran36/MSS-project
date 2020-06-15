@@ -1,7 +1,5 @@
 package Model;
 
-import DB.AuthenticateDB;
-
 import java.util.HashMap;
 
 public class Authenticate {

@@ -1,4 +1,4 @@
-package DB;
+package Model;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-
+import Model.MinHeapPriorityQueue.ArrayEntry;
 import Object.Classroom;
 import Object.Course;
 import Object.Student;
@@ -33,7 +33,29 @@ public class StudentDB {
     public StudentDB(){
 //      this.classroom = classroom;
   }
+    public static SortedArrayPriorityQueue heapSort(HeapSort hs){
+        SortedArrayPriorityQueue a = new SortedArrayPriorityQueue();
+        for (int i=1;i<hs.size();i++){
+            a.insert(hs.get(i).getKey(), hs.get(i).getValue());
+        }
+        return a;
+    }
     
+    public static int sreach(SortedArrayPriorityQueue a, int l, int r, String name) {
+    		
+            if (r >= l) { 
+                int mid = l + (r - l) / 2; 
+                String key = (String) a.get(mid).getKey();
+                key = key.toLowerCase();
+                if (key.equals(name)) 
+                    return mid; 
+                if (key.compareTo(name) > 1) 
+                    return sreach(a, l, mid - 1, name); 
+                return sreach(a, mid + 1, r, name); 
+            } 
+            return -1; 
+        
+    }
     
     public static void addStudent(Student stu, String code_root){
     	try {
@@ -347,7 +369,9 @@ public class StudentDB {
 	 	   }
     }
     
-    public static LinkedList<Student> getListClass(String code_root) {
+    public static SortedArrayPriorityQueue getListClass(String code_root) {
+    	
+    	HeapSort hs = new HeapSort();
     	LinkedList<Student> stdOfCourse = new LinkedList<>();//tree
         File f = new File("src/DB/student.fxml");
 
@@ -377,6 +401,7 @@ public class StudentDB {
                 NodeList courseList = student.getElementsByTagName("course");
                 LinkedList<Course> courses = new LinkedList<Course>();
                 LinkedList<String >code_rooms = new LinkedList<>();
+                
                 for (int j = 0; j < courseList.getLength(); j++) {
                     Node nodeCourse = courseList.item(j);
                     if (nodeCourse.getNodeType() == Node.ELEMENT_NODE) {
@@ -389,10 +414,19 @@ public class StudentDB {
                 if(code_rooms.contains(code_root)) {
                 	LinkedList<String> cr = new LinkedList<String>();
                 	cr.add(code_root);
-                	stdOfCourse.add(new Student(student.getElementsByTagName("name").item(0).getTextContent(),student.getElementsByTagName("code").item(0).getTextContent(),student.getElementsByTagName("dateOfBirth").item(0).getTextContent(),student.getElementsByTagName("address").item(0).getTextContent(), courses ));
+                	Student stu = new Student(student.getElementsByTagName("name").item(0).getTextContent(),student.getElementsByTagName("code").item(0).getTextContent(),student.getElementsByTagName("dateOfBirth").item(0).getTextContent(),student.getElementsByTagName("address").item(0).getTextContent(), courses);
+                	String arr [] = student.getElementsByTagName("name").item(0).getTextContent().split(" ");
+                	ArrayEntry<String,Student> heap = new ArrayEntry<>(arr[arr.length-1],stu);
+                	if(i==0) {
+                		hs.setRoot(heap);
+                	}else {
+                		hs.upHead(heap);
+                	}
+                	
                 }
             }
         }
-        return stdOfCourse;
+        SortedArrayPriorityQueue a = heapSort(hs);
+        return a;
     }
 }

@@ -11,6 +11,8 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
+import Model.HeapSort;
+import Model.SortedArrayPriorityQueue;
 import Object.Course;
 import Object.Student;
 
@@ -47,9 +49,9 @@ public class CourseView extends JFrame {
 	private static JTable table;
 	private JButton btnAddStu;
 	private static JButton btnimDanh;
-
-//	private Vector<String> vctHeader = new Vector<String>();
-//	private Vector<Vector<String>> vctData = new Vector<Vector<String>>();
+	private JButton btnSearch;
+	private JLabel lblMessSearch;
+	private JButton btnList;
 	
 	private static String [] columnNames = new String [] {
             "MSV", "Họ và tên", "Ngày sinh", "Địa chỉ", "Số buổi vắng", "Điểm thường xuyên", "Điểm giữa kì", "Điểm cuối kỳ", "Điểm trung bình"};
@@ -64,11 +66,11 @@ public class CourseView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CourseView(LinkedList<Student> student) {
+	public CourseView(SortedArrayPriorityQueue student) {
 		initCourseView(student);
 	}
 	
-	public void initCourseView(LinkedList<Student>student) {
+	public void initCourseView(SortedArrayPriorityQueue student) {
 		setTitle("Chia sẻ tài liệu");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(-5, -5, 1400, 735);
@@ -100,12 +102,12 @@ public class CourseView extends JFrame {
 		panel_1.add(lblNewLabel_1);
 		lblNewLabel_1.setIcon(new ImageIcon(ListStudents.class.getResource("/res/avt.png")));
 
-		JButton btnNewButton = new JButton("Danh sách sinh viên");
-		btnNewButton.setForeground(Color.WHITE);
-		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 13));
-		btnNewButton.setBackground(new Color(0, 139, 139));
-		btnNewButton.setBounds(0, 309, 226, 47);
-		panel.add(btnNewButton);
+		btnList = new JButton("Danh sách sinh viên");
+		btnList.setForeground(Color.WHITE);
+		btnList.setFont(new Font("Arial", Font.PLAIN, 13));
+		btnList.setBackground(new Color(0, 139, 139));
+		btnList.setBounds(0, 309, 226, 47);
+		panel.add(btnList);
 
 		btnimDanh = new JButton("Điểm danh");
 		btnimDanh.setForeground(Color.WHITE);
@@ -132,11 +134,17 @@ public class CourseView extends JFrame {
 		panel_3.add(textField);
 		textField.setColumns(10);
 		
-		JButton btnNewButton_2 = new JButton("Tìm kiếm");
-		btnNewButton_2.setBackground(new Color(46, 139, 87));
-		btnNewButton_2.setForeground(Color.WHITE);
-		btnNewButton_2.setBounds(472, 11, 109, 34);
-		panel_3.add(btnNewButton_2);
+		btnSearch = new JButton("Tìm kiếm");
+		btnSearch.setBackground(new Color(46, 139, 87));
+		btnSearch.setForeground(Color.WHITE);
+		btnSearch.setBounds(472, 11, 109, 34);
+		panel_3.add(btnSearch);
+		
+		lblMessSearch = new JLabel("");
+		lblMessSearch.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblMessSearch.setForeground(Color.WHITE);
+		lblMessSearch.setBounds(632, 11, 392, 34);
+		panel_3.add(lblMessSearch);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(257, 128, 1086, 502);
@@ -146,15 +154,16 @@ public class CourseView extends JFrame {
 		table = new JTable();
 		Object [][] students = new Object[student.size()][9];
 		for (int i = 0; i < student.size(); i++) {
-			students[i][0] = student.get(i).getCode();
-			students[i][1] = student.get(i).getName();
-			students[i][2] = student.get(i).getDateOfBirth();
-			students[i][3] = student.get(i).getAddress();
-			students[i][4] = student.get(i).getRoom().get(0).getNumOfAbsences();
-			students[i][5] = student.get(i).getRoom().get(0).getScoreAttendance();
-			students[i][6] = student.get(i).getRoom().get(0).getScoreMidTerm();
-			students[i][7] = student.get(i).getRoom().get(0).getScoreEndTerm();
-			students[i][8] = student.get(i).getRoom().get(0).getScore();
+			Student s = (Student)student.get(i).getValue();
+			students[i][0] = s.getCode();
+			students[i][1] = s.getName();
+			students[i][2] = s.getDateOfBirth();
+			students[i][3] = s.getAddress();
+			students[i][4] = s.getRoom().get(0).getNumOfAbsences();
+			students[i][5] = s.getRoom().get(0).getScoreAttendance();
+			students[i][6] = s.getRoom().get(0).getScoreMidTerm();
+			students[i][7] = s.getRoom().get(0).getScoreEndTerm();
+			students[i][8] = s.getRoom().get(0).getScore();
         }
 		
 		
@@ -191,6 +200,16 @@ public class CourseView extends JFrame {
 		
 	}
 	
+	public void addShowListListener(ActionListener listener) {
+		  
+		btnList.addActionListener(listener);
+	 }
+	
+	 public void addSearchListener(ActionListener listener) {
+		  
+		 btnSearch.addActionListener(listener);
+	 }
+	
 	 public void addEditStudentListener(ListSelectionListener listener) {
 		  
 		 table.getSelectionModel().addListSelectionListener(listener);
@@ -205,19 +224,35 @@ public class CourseView extends JFrame {
 		 btnimDanh.addActionListener(listener);
 	 }
 	 
-	 public static void setEditStudent(LinkedList<Student>student) {
+	 public static void setEditStudent(SortedArrayPriorityQueue student) {
 		 Object [][] students = new Object[student.size()][9];
 			for (int i = 0; i < student.size(); i++) {
-				students[i][0] = student.get(i).getCode();
-				students[i][1] = student.get(i).getName();
-				students[i][2] = student.get(i).getDateOfBirth();
-				students[i][3] = student.get(i).getAddress();
-				students[i][4] = student.get(i).getRoom().get(0).getNumOfAbsences();
-				students[i][5] = student.get(i).getRoom().get(0).getScoreAttendance();
-				students[i][6] = student.get(i).getRoom().get(0).getScoreMidTerm();
-				students[i][7] = student.get(i).getRoom().get(0).getScoreEndTerm();
-				students[i][8] = student.get(i).getRoom().get(0).getScore();
+				Student s = (Student)student.get(i).getValue();
+				students[i][0] = s.getCode();
+				students[i][1] = s.getName();
+				students[i][2] = s.getDateOfBirth();
+				students[i][3] = s.getAddress();
+				students[i][4] = s.getRoom().get(0).getNumOfAbsences();
+				students[i][5] = s.getRoom().get(0).getScoreAttendance();
+				students[i][6] = s.getRoom().get(0).getScoreMidTerm();
+				students[i][7] = s.getRoom().get(0).getScoreEndTerm();
+				students[i][8] = s.getRoom().get(0).getScore();
 	        }
+		 table.setModel(new DefaultTableModel(students,columnNames));
+	 }
+	 
+	 public static void setSearchStudent(Student student) {
+		 Object [][] students = new Object[1][9];
+		students[0][0] = student.getCode();
+		students[0][1] = student.getName();
+		students[0][2] = student.getDateOfBirth();
+		students[0][3] = student.getAddress();
+		students[0][4] = student.getRoom().get(0).getNumOfAbsences();
+		students[0][5] = student.getRoom().get(0).getScoreAttendance();
+		students[0][6] = student.getRoom().get(0).getScoreMidTerm();
+		students[0][7] = student.getRoom().get(0).getScoreEndTerm();
+		students[0][8] = student.getRoom().get(0).getScore();
+	   
 		 table.setModel(new DefaultTableModel(students,columnNames));
 	 }
 	 public static Student getStudentFromSelectedRow(String code_root) {
@@ -238,5 +273,14 @@ public class CourseView extends JFrame {
 			id = table.getModel().getValueAt(row, 0).toString();
 		 }
 		 return id;
+	 }
+	 
+	 public String getNameSearch() {
+		 String name = textField.getText();
+		 return name;
+	 }
+	 
+	 public void setSearchMess(String mess) {
+		 lblMessSearch.setText(mess);
 	 }
 }
