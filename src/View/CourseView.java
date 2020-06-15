@@ -46,7 +46,7 @@ public class CourseView extends JFrame {
 	private JPanel contentPane;
 	private static JTable table;
 	private JButton btnAddStu;
-	
+	private static JButton btnimDanh;
 
 //	private Vector<String> vctHeader = new Vector<String>();
 //	private Vector<Vector<String>> vctData = new Vector<Vector<String>>();
@@ -57,6 +57,7 @@ public class CourseView extends JFrame {
 	private Object data = new Object [][] {
 		
 	};
+	private JTextField textField;
 	/**
 	 * Launch the application.
 	 */
@@ -106,7 +107,7 @@ public class CourseView extends JFrame {
 		btnNewButton.setBounds(0, 309, 226, 47);
 		panel.add(btnNewButton);
 
-		JButton btnimDanh = new JButton("\u0110i\u1EC3m danh");
+		btnimDanh = new JButton("\u0110i\u1EC3m danh");
 		btnimDanh.setForeground(Color.WHITE);
 		btnimDanh.setFont(new Font("Arial", Font.PLAIN, 13));
 		btnimDanh.setBackground(new Color(0, 139, 139));
@@ -119,26 +120,23 @@ public class CourseView extends JFrame {
 		btnChiaSTi.setBackground(new Color(0, 139, 139));
 		btnChiaSTi.setBounds(0, 406, 226, 47);
 		panel.add(btnChiaSTi);
-		
-		JButton btnNewButton_1_1 = new JButton("Upload File");
-		btnNewButton_1_1.setBounds(25, 450, 153, 42);
-		panel.add(btnNewButton_1_1);
-		btnNewButton_1_1.setBackground(new Color(47, 79, 79));
-		btnNewButton_1_1.setFont(new Font("Arial", Font.PLAIN, 13));
-		btnNewButton_1_1.setForeground(Color.WHITE);
-		
-		JButton btnNewButton_1 = new JButton("T\u1EA3i l\u00EAn");
-		btnNewButton_1.setBounds(25, 494, 153, 42);
-		panel.add(btnNewButton_1);
-		btnNewButton_1.setBackground(new Color(47, 79, 79));
-		btnNewButton_1.setFont(new Font("Arial", Font.PLAIN, 13));
-		btnNewButton_1.setForeground(Color.WHITE);
 
 		JPanel panel_3 = new JPanel();
 		panel_3.setBounds(224, 0, 1156, 56);
 		panel_3.setBackground(new Color(244, 164, 96));
 		contentPane.add(panel_3);
 		panel_3.setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(145, 11, 317, 34);
+		panel_3.add(textField);
+		textField.setColumns(10);
+		
+		JButton btnNewButton_2 = new JButton("T\u00ECm ki\u1EBFm");
+		btnNewButton_2.setBackground(new Color(46, 139, 87));
+		btnNewButton_2.setForeground(Color.WHITE);
+		btnNewButton_2.setBounds(472, 11, 109, 34);
+		panel_3.add(btnNewButton_2);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(257, 128, 1086, 502);
@@ -181,7 +179,7 @@ public class CourseView extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("Danh sÃ¡ch sinh viÃªn lá»›p");
 		lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_2.setBounds(367, 78, 865, 39);
+		lblNewLabel_2.setBounds(394, 67, 865, 39);
 		contentPane.add(lblNewLabel_2);
 		
 		btnAddStu = new JButton("ThÃªm sinh viÃªn");
@@ -201,6 +199,10 @@ public class CourseView extends JFrame {
 	 public void addAddStudentListener(ActionListener listener) {
 		 btnAddStu.addActionListener(listener);
 		
+	 }
+	 
+	 public static void addAttendanceStudentListener(ActionListener listener) {
+		 btnimDanh.addActionListener(listener);
 	 }
 	 
 	 public static void setEditStudent(LinkedList<Student>student) {

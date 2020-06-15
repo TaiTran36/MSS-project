@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 import ObjInterface.UserInterface;
 
-public class Student implements UserInterface, Comparator<Student>{
+public class Student implements UserInterface{
 
 	
 	private String name, code, dateOfBirth, address;
@@ -89,14 +89,5 @@ public class Student implements UserInterface, Comparator<Student>{
 		return 0;
 	}
 
-
-
-
-
-	@Override
-	public int compare(Student o1, Student o2) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }

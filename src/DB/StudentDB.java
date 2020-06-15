@@ -237,6 +237,60 @@ public class StudentDB {
 	 	   }
     }
     
+    public void attendanceStudent(String code_stu, String code_root, int att) {
+    	try {
+    		String filepath = "src/DB/student.fxml";
+    		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+    		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+    		Document doc = docBuilder.parse(filepath);
+    		
+    		Element students = doc.getDocumentElement();
+            NodeList studentList = students.getElementsByTagName("student");
+            for (int i = 0; i < studentList.getLength(); i++) {
+                Node node = studentList.item(i);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element student = (Element) node;
+                    String s = student.getAttributes().getNamedItem("id").getTextContent();
+                    if(s.equals(code_stu)) {
+                    	NodeList courseList = student.getElementsByTagName("course");
+                    	for (int j = 0; j < courseList.getLength(); j++) {
+                            Node nodeCourse = courseList.item(j);
+                            if (nodeCourse.getNodeType() == Node.ELEMENT_NODE) {
+                                Element room = (Element) nodeCourse;
+                                if(room.getElementsByTagName("code_room").item(0).getTextContent().equals(code_root)){
+                                	
+                                	int num = Integer.valueOf(room.getElementsByTagName("numOfAbsences").item(0).getTextContent());
+                                	room.getElementsByTagName("numOfAbsences").item(0).setTextContent(String.valueOf(num+1));
+                                }
+                            }
+                    	}
+                    }
+                }
+            }
+            
+
+    		TransformerFactory transformerFactory = TransformerFactory.newInstance();
+    		Transformer transformer = transformerFactory.newTransformer();
+    		DOMSource source = new DOMSource(doc);
+    		StreamResult result = new StreamResult(new File(filepath));
+    		transformer.transform(source, result);
+
+    		
+	    	}catch (ParserConfigurationException pce) {
+	    		pce.printStackTrace();
+	 	   } catch (IOException ioe) {
+	 		ioe.printStackTrace();
+	 	   } catch (SAXException sae) {
+	 		sae.printStackTrace();
+	 	   } catch (TransformerConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	 	   } catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	 	   }
+    }
+    
     public static void editStudent(Student stu, String code_root) {
     	try {
     		String filepath = "src/DB/student.fxml";
