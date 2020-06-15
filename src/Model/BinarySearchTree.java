@@ -1,33 +1,33 @@
 package Model;
 import java.util.Comparator;
+import java.util.LinkedList;
 
+import Object.Course;
 import Object.Student;
-class BinarySearchTree <Student> implements Comparator<Student>
+class BinarySearchTree <T extends Comparable<T>>
 { 
-   class Node <Student>
+   class Node <T>
    { 
-	   Student key; 
-       Node<Student> left, right; 
+	   T key; 
+       Node<T> left, right; 
  
-       public Node(Student item) 
+       public Node(T item) 
        { 
            key = item; 
            left = right = null; 
        } 
    } 
  
-   // Root của cây 
-   Node root; 
+   Node<T> root; 
  
-   // Hàm dựng 
    BinarySearchTree() 
    { 
        root = null; 
    } 
  
-   Student minValue(Node<Student> root) 
+   T minValue(Node<T> root) 
    { 
-       Student minv = root.key; 
+       T minv = root.key; 
        while (root.left != null) 
        { 
            minv = root.left.key; 
@@ -36,47 +36,34 @@ class BinarySearchTree <Student> implements Comparator<Student>
        return minv; 
    } 
    
-   @Override
-   public int compare(Student o1, Student o2) {
-   	// TODO Auto-generated method stub
-	   
-   	return 0;
-   }
 
-   void insert(Student key) 
+   void insert(T key) 
    { 
        root = insertRec(root, key); 
    } 
  
 
-   Node insertRec(Node<Student> root, Student key) 
+   Node insertRec(Node<T> root, T key) 
    { 
  
-       /* nếu cây rỗng trả về node mới */
        if (root == null) 
        { 
            root = new Node(key); 
            return root; 
        } 
- 
-       /* ngược lại sẽ thực hiện duyệt dọc cây */
-       if ( compare(key, root.key) == 1) 
+       if (key.compareTo(root.key) == -1) 
            root.left = insertRec(root.left, key); 
-       else if (key > root.key) 
+       else if (key.compareTo(root.key) == 1) 
            root.right = insertRec(root.right, key); 
- 
-       /* trả về cây nhị phân đã được thêm phần tử mới */
        return root; 
    } 
  
-   // Phương thức gọi hàm sắp xếp 
    void inorder() 
    { 
        inorderRec(root); 
    } 
  
-   // hàm thực hiện việc sắp xếp và in ra cây nhị phân đã được sắp xếp 
-   void inorderRec(Node root) 
+   void inorderRec(Node<T> root) 
    { 
        if (root != null) 
        { 
@@ -86,16 +73,14 @@ class BinarySearchTree <Student> implements Comparator<Student>
        } 
    } 
    
-   public static Node search(Node root, int key) { 
-		// Trường hợp gốc : nếu node null hoặc là node root
-		if (root==null || root.key==key) 
-		    return root; 
-		
-		// gia trị lớn hơn giá trị code node root 
-		if (root.key > key) 
+   public T search(Node<T> root, T key) { 
+	
+		if (root==null ) return null; 
+		if(root.key==key) {
+			return key;
+		}
+		if (root.key.compareTo(key) == 1) 
 		    return search(root.left, key); 
-		
-		// giá trị bé hơn giá trị của node root 
 		return search(root.right, key); 
    } 
  
@@ -109,7 +94,11 @@ class BinarySearchTree <Student> implements Comparator<Student>
          30      70 
         /  \    /  \ 
        20   40  60   80 */
-       tree.insert(50); 
+       Course c = new Course(3.0, 2, 2.0, 3.0, 2.0);
+       LinkedList<Course> cs = new LinkedList<Course>();
+       cs.add(c);
+       Student s1 = new Student("ấ", "sá", "sadsa", "dád", cs);
+       tree.insert((Comparable) s1); 
        tree.insert(30); 
        tree.insert(20); 
        tree.insert(40); 
@@ -119,23 +108,8 @@ class BinarySearchTree <Student> implements Comparator<Student>
  
        System.out.println("Inorder traversal of the given tree"); 
        tree.inorder(); 
- 
-       System.out.println("\nDelete 20"); 
-       tree.deleteKey(20); 
-       System.out.println("Inorder traversal of the modified tree"); 
-       tree.inorder(); 
- 
-       System.out.println("\nDelete 30"); 
-       tree.deleteKey(30); 
-       System.out.println("Inorder traversal of the modified tree"); 
-       tree.inorder(); 
- 
-       System.out.println("\nDelete 50"); 
-       tree.deleteKey(50); 
-       System.out.println("Inorder traversal of the modified tree"); 
-       tree.inorder(); 
        
-       System.out.println(search(tree.root,40)); 
+       System.out.println(tree.search(tree.root, 40)); 
    }
 
 

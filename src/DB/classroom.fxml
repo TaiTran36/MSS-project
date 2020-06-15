@@ -84,4 +84,4 @@
         </timetable>
         <quantity>40</quantity>
     </classroom>
-</classrooms>
+<classroom><name>ABC</name><code>dsafsd</code><semester>2</semester><scholastic>2019-2020</scholastic><timetable><day>Tsvd</day><time>fds</time><room>dsa</room></timetable><timetable><day>Tsvd</day><time>fds</time><room>dsa</room></timetable><quantity>0</quantity></classroom></classrooms>
