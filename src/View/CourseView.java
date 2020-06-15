@@ -52,7 +52,7 @@ public class CourseView extends JFrame {
 //	private Vector<Vector<String>> vctData = new Vector<Vector<String>>();
 	
 	private static String [] columnNames = new String [] {
-            "MSV", "Há»� vÃ  tÃªn", "NgÃ y sinh", "Ä�á»‹a chá»‰", "Sá»‘ buá»•i váº¯ng", "Ä�Iá»ƒm thÆ°á»�ng xuyÃªn", "Ä�iá»ƒm giá»¯a kÃ¬", "Ä�iá»ƒm cuá»‘i kÃ¬", "Ä�iá»ƒm trung bÃ¬nh"};
+            "MSV", "Họ và tên", "Ngày sinh", "Địa chỉ", "Số buổi vắng", "Điểm thường xuyên", "Điểm giữa kì", "Điểm cuối kỳ", "Điểm trung bình"};
 	
 	private Object data = new Object [][] {
 		
@@ -69,7 +69,7 @@ public class CourseView extends JFrame {
 	}
 	
 	public void initCourseView(LinkedList<Student>student) {
-		setTitle("Chia s\u1EBB t\u00E0i li\u1EC7u");
+		setTitle("Chia sẻ tài liệu");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(-5, -5, 1400, 735);
 		contentPane = new JPanel();
@@ -89,7 +89,7 @@ public class CourseView extends JFrame {
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("NGUY\u1EC4N TH\u1ECA H\u1ED2NG MINH");
+		JLabel lblNewLabel = new JLabel("NGUYỄN THỊ HỒNG MINH");
 		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 14));
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(20, 190, 206, 30);
@@ -100,21 +100,21 @@ public class CourseView extends JFrame {
 		panel_1.add(lblNewLabel_1);
 		lblNewLabel_1.setIcon(new ImageIcon(ListStudents.class.getResource("/res/avt.png")));
 
-		JButton btnNewButton = new JButton("Danh s\u00E1ch sinh vi\u00EAn");
+		JButton btnNewButton = new JButton("Danh sách sinh viên");
 		btnNewButton.setForeground(Color.WHITE);
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 13));
 		btnNewButton.setBackground(new Color(0, 139, 139));
 		btnNewButton.setBounds(0, 309, 226, 47);
 		panel.add(btnNewButton);
 
-		btnimDanh = new JButton("\u0110i\u1EC3m danh");
+		btnimDanh = new JButton("Điểm danh");
 		btnimDanh.setForeground(Color.WHITE);
 		btnimDanh.setFont(new Font("Arial", Font.PLAIN, 13));
 		btnimDanh.setBackground(new Color(0, 139, 139));
 		btnimDanh.setBounds(0, 358, 226, 47);
 		panel.add(btnimDanh);
 
-		JButton btnChiaSTi = new JButton("Chia s\u1EBB t\u00E0i li\u1EC7u");
+		JButton btnChiaSTi = new JButton("Chia sẻ tài liệu");
 		btnChiaSTi.setForeground(Color.WHITE);
 		btnChiaSTi.setFont(new Font("Arial", Font.PLAIN, 13));
 		btnChiaSTi.setBackground(new Color(0, 139, 139));
@@ -132,7 +132,7 @@ public class CourseView extends JFrame {
 		panel_3.add(textField);
 		textField.setColumns(10);
 		
-		JButton btnNewButton_2 = new JButton("T\u00ECm ki\u1EBFm");
+		JButton btnNewButton_2 = new JButton("Tìm kiếm");
 		btnNewButton_2.setBackground(new Color(46, 139, 87));
 		btnNewButton_2.setForeground(Color.WHITE);
 		btnNewButton_2.setBounds(472, 11, 109, 34);
@@ -177,12 +177,12 @@ public class CourseView extends JFrame {
 		
 		
 		
-		JLabel lblNewLabel_2 = new JLabel("Danh sÃ¡ch sinh viÃªn lá»›p");
+		JLabel lblNewLabel_2 = new JLabel("Danh sách sinh viên");
 		lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		lblNewLabel_2.setBounds(394, 67, 865, 39);
 		contentPane.add(lblNewLabel_2);
 		
-		btnAddStu = new JButton("ThÃªm sinh viÃªn");
+		btnAddStu = new JButton("Thêm sinh viên");
 		btnAddStu.setBackground(new Color(0, 128, 128));
 		btnAddStu.setForeground(Color.WHITE);
 		btnAddStu.setBounds(1180, 644, 138, 41);
