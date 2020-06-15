@@ -6,7 +6,9 @@ import java.util.LinkedList;
 
 import Controller.CourseController.AddStudentListener;
 import Controller.CourseController.CourseListener;
-import DB.StudentDB;
+import Model.HeapSort;
+import Model.SortedArrayPriorityQueue;
+import Model.StudentDB;
 import Object.Student;
 import View.CourseView;
 import View.PopupActionStudent;
@@ -18,7 +20,7 @@ public class ActionController {
 	private PopupActionStudent actionStudent;
 	private CourseView courseView;
 	private Student student;
-	private static String cr;
+	private String cr;
 	private PopupEditStudent editStudent;
 	private StudentDB courseDB;
 	private CourseView cw;
@@ -55,7 +57,7 @@ public class ActionController {
 			// TODO Auto-generated method stub
 			String id = cw.getIdStudent();
 			courseDB.deleteStudent(id, cr);
-			LinkedList<Student> s = courseDB.getListClass(cr);
+			SortedArrayPriorityQueue s = courseDB.getListClass(cr);
 			courseView.setEditStudent(s);
 		}
     }

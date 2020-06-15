@@ -179,10 +179,15 @@ public class PopupAddStudent extends JFrame {
 		String address = textField_3.getText();
 		
 		String numOfAbsences = textField_4.getText();
+		numOfAbsences = (numOfAbsences.equals(""))?("0"):numOfAbsences;
 		String scoreAttendance = textField_5.getText();
+		scoreAttendance = (scoreAttendance.equals(""))?("0"):scoreAttendance;
 		String scoreMidTerm = textField_6.getText();
+		scoreMidTerm = (scoreMidTerm.equals(""))?("0"):scoreMidTerm;
 		String scoreEndTerm = textField_7.getText();
+		scoreEndTerm = (scoreEndTerm.equals(""))?("0"):scoreEndTerm;
 		String score = textField_8.getText();
+		score = (score.equals(""))?("0"):score;
 		
 		Course c = new Course(Double.parseDouble(score), Integer.parseInt(numOfAbsences), Double.parseDouble(scoreAttendance), Double.parseDouble(scoreMidTerm), Double.parseDouble(scoreEndTerm));
 		LinkedList<Course> cou = new LinkedList<Course>();

@@ -1,480 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><students>
     <student id="16003436">
         <name>NGUYỄN THỊ KIỀU TRANG</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
+        <code>16003436</code>
+        <dateOfBirth>25/07/1997</dateOfBirth>
+        <address>86 Vũ Trọng Phụng</address>
         <course>
             <code_room>MAT01</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
+            <score>6.0</score>
+            <numOfAbsences>2</numOfAbsences>
+            <scoreAttendance>5.0</scoreAttendance>
+            <scoreMidTerm>6.0</scoreMidTerm>
+            <scoreEndTerm>7.0</scoreEndTerm>
         </course>
        	<course>
             <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
+            <score>7</score>
+            <numOfAbsences>1</numOfAbsences>
+            <scoreAttendance>7</scoreAttendance>
+            <scoreMidTerm>7</scoreMidTerm>
+            <scoreEndTerm>8</scoreEndTerm>
         </course>
         
         
-    <course><code_room>MAT02</code_room><score>2.0</score><numOfAbsences>2</numOfAbsences><scoreAttendance>2.0</scoreAttendance><scoreMidTerm>2.0</scoreMidTerm><scoreEndTerm>2.0</scoreEndTerm></course></student>
+    <course><code_room>MAT02</code_room><score>2.0</score><numOfAbsences>3</numOfAbsences><scoreAttendance>2.0</scoreAttendance><scoreMidTerm>2.0</scoreMidTerm><scoreEndTerm>2.0</scoreEndTerm></course></student>
     <student id="16003430">
-         <name>NGUYỄN THỊ KIỀU TRANG 2</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
+        <name>Nguyễn Thị Liên</name>
+        <code>16003430</code>
+        <dateOfBirth>12/01/1998</dateOfBirth>
+        <address>80 Vũ Trọng Phụng</address>
         <course>
             <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
+            <score>7.0</score>
+            <numOfAbsences>0</numOfAbsences>
+            <scoreAttendance>7.5</scoreAttendance>
+            <scoreMidTerm>6.0</scoreMidTerm>
+            <scoreEndTerm>6.0</scoreEndTerm>
         </course>
        	<course>
             <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
+            <score>7.0</score>
+            <numOfAbsences>0</numOfAbsences>
+            <scoreAttendance>6.0</scoreAttendance>
+            <scoreMidTerm>6.0</scoreMidTerm>
+            <scoreEndTerm>6.0</scoreEndTerm>
         </course>
     </student>
     <student id="16003431">
-       <name>NGUYỄN THỊ KIỀU TRANG 3</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
+       <name>Lê Văn Nam</name>
+        <code>16003431</code>
+        <dateOfBirth>21/12/1998</dateOfBirth>
+        <address>80 Vũ Trọng Phụng</address>
         <course>
             <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
+            <score>7.0</score>
+            <numOfAbsences>1</numOfAbsences>
+            <scoreAttendance>6.5</scoreAttendance>
+            <scoreMidTerm>7.0</scoreMidTerm>
+            <scoreEndTerm>7.5</scoreEndTerm>
         </course>
        	<course>
             <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
+            <score>8.0</score>
+            <numOfAbsences>0</numOfAbsences>
+            <scoreAttendance>7.5</scoreAttendance>
+            <scoreMidTerm>8.5</scoreMidTerm>
+            <scoreEndTerm>8.0</scoreEndTerm>
         </course>
     </student>
     <student id="16003432">
-        <name>NGUYỄN THỊ KIỀU TRANG 4</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
+        <name>Lê Bảo Bình</name>
+        <code>16003432</code>
+        <dateOfBirth>12/02/1997</dateOfBirth>
+        <address>81 Vũ Trọng Phụng</address>
         <course>
             <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
+            <score>7.0</score>
+            <numOfAbsences>1</numOfAbsences>
+            <scoreAttendance>7.0</scoreAttendance>
+            <scoreMidTerm>8.0</scoreMidTerm>
+            <scoreEndTerm>6.5</scoreEndTerm>
         </course>
        	<course>
             <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
+            <score>8.5</score>
+            <numOfAbsences>0</numOfAbsences>
+            <scoreAttendance>7.5</scoreAttendance>
+            <scoreMidTerm>7.0</scoreMidTerm>
+            <scoreEndTerm>9.0</scoreEndTerm>
         </course>
     </student>
-    <student id="16003433">
-         <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-    <student id="16003434">
-         <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-    <student id="16003435">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    <course><code_room>MAT01</code_room><score>3.0</score><numOfAbsences>3</numOfAbsences><scoreAttendance>3.0</scoreAttendance><scoreMidTerm>3.0</scoreMidTerm><scoreEndTerm>3.0</scoreEndTerm></course></student>
-    <student id="16003437">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-  <student id="16003438">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
- <student id="16003439">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-    <student id="16003440">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-   <student id="16003441">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-   <student id="16003442">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-<student id="16003443">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-  <student id="16003444">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
- <student id="16003445">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-   <student id="16003446">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-   <student id="16003447">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-   <student id="16003448">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-   <student id="16003449">
-        <name>NGUYỄN THỊ KIỀU TRANG 5</name>
-        <code>amcnxvc</code>
-        <dateOfBirth>2</dateOfBirth>
-        <address>2019-2020</address>
-        <course>
-            <code_room>MAT02</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-       	<course>
-            <code_room>MAT04</code_room>
-            <score>40</score>
-            <numOfAbsences>12</numOfAbsences>
-            <scoreAttendance>21</scoreAttendance>
-            <scoreMidTerm>23</scoreMidTerm>
-            <scoreEndTerm>232</scoreEndTerm>
-        </course>
-    </student>
-	<student id="16001222">
-		<name>hihi</name>
-		<code>16001222</code>
-		<dateOfBirth>hihi</dateOfBirth>
-		<address>amdsa</address>
-		<course>
-		<code_room>MAT02</code_room>
-		<score>2.0</score>
-		<numOfAbsences>6</numOfAbsences>
-		<scoreAttendance>4</scoreAttendance>
-		<scoreMidTerm>4</scoreMidTerm>
-		<scoreEndTerm>4</scoreEndTerm>
-		</course>	
-	</student>
-	<student id="16001121">
-		<name>dsadsa</name>
-		<code>16001121</code>
-		<dateOfBirth>dsadsa</dateOfBirth>
-		<address>dá</address>
-	</student>
-	<student id="16003000">
-	<name>huhu</name>
-	<code>16003000</code>
-	<dateOfBirth>huhu</dateOfBirth>
-	<address>đas</address>
-	<course>
-	<code_room>MAT02</code_room>
-	<score>3.0</score>
-	<numOfAbsences>4</numOfAbsences>
-	<scoreAttendance>3.0</scoreAttendance>
-	<scoreMidTerm>3.0</scoreMidTerm>
-	<scoreEndTerm>3.0</scoreEndTerm>
-	</course>
-	</student>
-	<student id="16001238"><name>sads</name><code>16001238</code><dateOfBirth>sads</dateOfBirth><address>dsd</address></student><student id="16001001"><name>Vũ Ngọc Công</name><code>16001001</code><dateOfBirth>19-9-1995</dateOfBirth><address>Hà Nội</address><course><code_room>MAT01</code_room><score>9.0</score><numOfAbsences>0</numOfAbsences><scoreAttendance>9.0</scoreAttendance><scoreMidTerm>8.0</scoreMidTerm><scoreEndTerm>8.0</scoreEndTerm></course></student><student id="16001002"><name>Nguyễn Thị Hà</name><code>16001002</code><dateOfBirth>10-10-1998</dateOfBirth><address>Ninh Bình</address><course><code_room>MAT01</code_room><score>8.0</score><numOfAbsences>1</numOfAbsences><scoreAttendance>8.0</scoreAttendance><scoreMidTerm>6.0</scoreMidTerm><scoreEndTerm>7.0</scoreEndTerm></course><course><code_room>MAT03</code_room><score>8.0</score><numOfAbsences>1</numOfAbsences><scoreAttendance>8.0</scoreAttendance><scoreMidTerm>6.0</scoreMidTerm><scoreEndTerm>6.0</scoreEndTerm></course></student><student id="16001003"><name>Bùi Xuân Huấn</name><code>16001003</code><dateOfBirth>8-7-1968</dateOfBirth><address>Yên Bái</address><course><code_room>MAT01</code_room><score>3.0</score><numOfAbsences>3</numOfAbsences><scoreAttendance>2.0</scoreAttendance><scoreMidTerm>4.0</scoreMidTerm><scoreEndTerm>2.0</scoreEndTerm></course><course><code_room>MAT03</code_room><score>5.0</score><numOfAbsences>3</numOfAbsences><scoreAttendance>2.0</scoreAttendance><scoreMidTerm>3.0</scoreMidTerm><scoreEndTerm>4.0</scoreEndTerm></course></student><student id="16001004"><name>Nguyễn Thanh Tùng</name><code>16001004</code><dateOfBirth>5-7-1994</dateOfBirth><address>Thái Bình</address><course><code_room>MAT01</code_room><score>10.0</score><numOfAbsences>0</numOfAbsences><scoreAttendance>10.0</scoreAttendance><scoreMidTerm>10.0</scoreMidTerm><scoreEndTerm>10.0</scoreEndTerm></course><course><code_room>MAT03</code_room><score>10.0</score><numOfAbsences>0</numOfAbsences><scoreAttendance>10.0</scoreAttendance><scoreMidTerm>10.0</scoreMidTerm><scoreEndTerm>10.0</scoreEndTerm></course></student><student id="16001005"><name>Bùi Minh Anh</name><code>16001005</code><dateOfBirth>19-9-1994</dateOfBirth><address>Hà Nội</address><course><code_room>MAT01</code_room><score>8.0</score><numOfAbsences>3</numOfAbsences><scoreAttendance>5.0</scoreAttendance><scoreMidTerm>6.0</scoreMidTerm><scoreEndTerm>7.0</scoreEndTerm></course></student><student id="16001006"><name>Lê Đức Cường</name><code>16001006</code><dateOfBirth>18-9-1997</dateOfBirth><address>Nam Định</address><course><code_room>MAT01</code_room><score>5.0</score><numOfAbsences>2</numOfAbsences><scoreAttendance>5.0</scoreAttendance><scoreMidTerm>8.0</scoreMidTerm><scoreEndTerm>8.0</scoreEndTerm></course><course><code_room>MAT03</code_room><score>6.6</score><numOfAbsences>0</numOfAbsences><scoreAttendance>7.0</scoreAttendance><scoreMidTerm>8.0</scoreMidTerm><scoreEndTerm>9.0</scoreEndTerm></course></student><student id="16001007"><name>Monkey D. Luffy</name><code>16001007</code><dateOfBirth>21-5-1993</dateOfBirth><address>Nhật Bản</address><course><code_room>MAT01</code_room><score>2.0</score><numOfAbsences>1</numOfAbsences><scoreAttendance>2.0</scoreAttendance><scoreMidTerm>3.0</scoreMidTerm><scoreEndTerm>2.0</scoreEndTerm></course></student><student id="16001008"><name>Lê Nam Phong</name><code>16001008</code><dateOfBirth>1-1-1998</dateOfBirth><address>Bắc Ninh</address><course><code_room>MAT01</code_room><score>8.0</score><numOfAbsences>1</numOfAbsences><scoreAttendance>5.0</scoreAttendance><scoreMidTerm>7.0</scoreMidTerm><scoreEndTerm>7.0</scoreEndTerm></course></student><student id="16001009"><name>Nguyễn Thị Thủy</name><code>16001009</code><dateOfBirth>12-11-1998</dateOfBirth><address>Hải Phòng</address><course><code_room>MAT01</code_room><score>9.0</score><numOfAbsences>0</numOfAbsences><scoreAttendance>7.0</scoreAttendance><scoreMidTerm>8.0</scoreMidTerm><scoreEndTerm>8.0</scoreEndTerm></course></student><student id="16001010"><name>Trần Thanh Nga</name><code>16001010</code><dateOfBirth>6-8-1998</dateOfBirth><address>Hà Nội</address><course><code_room>MAT01</code_room><score>8.0</score><numOfAbsences>1</numOfAbsences><scoreAttendance>6.0</scoreAttendance><scoreMidTerm>7.0</scoreMidTerm><scoreEndTerm>8.0</scoreEndTerm></course></student><student id="16001011"><name>Ngô Mạnh Hùng</name><code>16001011</code><dateOfBirth>17-8-1993</dateOfBirth><address>Hà Nội</address><course><code_room>MAT01</code_room><score>3.0</score><numOfAbsences>2</numOfAbsences><scoreAttendance>5.0</scoreAttendance><scoreMidTerm>3.0</scoreMidTerm><scoreEndTerm>4.0</scoreEndTerm></course></student><student id="16001012"><name>Hà Văn Đức</name><code>16001012</code><dateOfBirth>30-4-1998</dateOfBirth><address>Lào Cai</address><course><code_room>MAT01</code_room><score>9.0</score><numOfAbsences>0</numOfAbsences><scoreAttendance>5.0</scoreAttendance><scoreMidTerm>7.0</scoreMidTerm><scoreEndTerm>8.0</scoreEndTerm></course></student>
-	<student id="16001001"><name>Vũ Ngọc Công</name><code>16001001</code><dateOfBirth>19-9-1995</dateOfBirth><address>Hà Nội</address><course><code_room>MAT03</code_room><score>9.0</score><numOfAbsences>0</numOfAbsences><scoreAttendance>9.0</scoreAttendance><scoreMidTerm>8.0</scoreMidTerm><scoreEndTerm>8.0</scoreEndTerm></course></student>
-	<student id="16001234"><name>Trần Trung Hiếu</name><code>16001234</code><dateOfBirth>19-8-1998</dateOfBirth><address>Thanh Hóa</address><course><code_room>MAT03</code_room><score>8.0</score><numOfAbsences>2</numOfAbsences><scoreAttendance>4.0</scoreAttendance><scoreMidTerm>4.0</scoreMidTerm><scoreEndTerm>5.0</scoreEndTerm></course></student><student id="16001235"><name>Nguyễn Đức Mạnh</name><code>16001235</code><dateOfBirth>26-3-1998</dateOfBirth><address>Hòa Bình</address><course><code_room>MAT03</code_room><score>9.0</score><numOfAbsences>2</numOfAbsences><scoreAttendance>6.0</scoreAttendance><scoreMidTerm>8.0</scoreMidTerm><scoreEndTerm>8.0</scoreEndTerm></course></student><student id="16001236"><name>Tô Vĩnh Long</name><code>16001236</code><dateOfBirth>17-7-1997</dateOfBirth><address>Ninh Bình</address><course><code_room>MAT03</code_room><score>2.0</score><numOfAbsences>2</numOfAbsences><scoreAttendance>3.0</scoreAttendance><scoreMidTerm>5.0</scoreMidTerm><scoreEndTerm>5.0</scoreEndTerm></course></student></students>
+ 
+<student id="16003420"><name>Nguyễn Văn An</name><code>16003420</code><dateOfBirth>25/07/1998</dateOfBirth><address>50 Nguyễn Trãi</address><course><code_room>MAT02</code_room><score>0.0</score><numOfAbsences>1</numOfAbsences><scoreAttendance>0.0</scoreAttendance><scoreMidTerm>0.0</scoreMidTerm><scoreEndTerm>0.0</scoreEndTerm></course></student></students>

@@ -88,12 +88,6 @@ class BinarySearchTree <T extends Comparable<T>>
    { 
        BinarySearchTree tree = new BinarySearchTree(); 
  
-       /* Let us create following BST 
-             50 
-          /     \ 
-         30      70 
-        /  \    /  \ 
-       20   40  60   80 */
        Course c = new Course(3.0, 2, 2.0, 3.0, 2.0);
        LinkedList<Course> cs = new LinkedList<Course>();
        cs.add(c);

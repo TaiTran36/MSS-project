@@ -84,4 +84,4 @@
         </timetable>
         <quantity>40</quantity>
     </classroom>
-</classrooms>
+<classroom><name>ưd</name><code>MAT06</code><semester>dá</semester><scholastic>dsa</scholastic><timetable><day>dsa</day><time>dá</time><room>dsa</room></timetable><timetable><day>dsa</day><time>dá</time><room>dsa</room></timetable><quantity>0</quantity></classroom></classrooms>

@@ -16,6 +16,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
+import Model.HeapSort;
+import Model.SortedArrayPriorityQueue;
 import Object.Course;
 import Object.Student;
 
@@ -41,13 +43,13 @@ public class PopupAttendance extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public PopupAttendance(LinkedList<Student> stu) {
-		initPopupAttendance(stu);
+	public PopupAttendance(SortedArrayPriorityQueue student) {
+		initPopupAttendance(student);
 	}
 	/**
 	 * Create the frame.
 	 */
-	public void initPopupAttendance(LinkedList<Student> student) {
+	public void initPopupAttendance(SortedArrayPriorityQueue student) {
 		setTitle("T\u1EA1o l\u1EDBp h\u1ECDc");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 1017, 646);
@@ -77,9 +79,10 @@ public class PopupAttendance extends JFrame {
 		table = new JTable();
 		Object [][] students = new Object[student.size()][9];
 		for (int i = 0; i < student.size(); i++) {
-			students[i][0] = student.get(i).getCode();
-			students[i][1] = student.get(i).getName();
-			students[i][2] = student.get(i).getRoom().get(0).getNumOfAbsences();
+			Student s = (Student)student.get(i).getValue();
+			students[i][0] = s.getCode();
+			students[i][1] = s.getName();
+			students[i][2] = s.getRoom().get(0).getNumOfAbsences();
         }
 		
 		

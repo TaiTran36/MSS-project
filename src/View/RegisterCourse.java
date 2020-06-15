@@ -32,6 +32,7 @@ public class RegisterCourse extends JFrame {
 	private JTextField textField_8;
 	private JTextField textField_9;
 	private JButton btnAddRoom;
+	private JLabel lblMess;
 
 	/**
 	 * Launch the application.
@@ -72,11 +73,11 @@ public class RegisterCourse extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("T\u00EAn l\u1EDBp h\u1ECDc ");
 		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setBounds(36, 58, 72, 22);
+		lblNewLabel_1.setBounds(36, 72, 72, 22);
 		contentPane.add(lblNewLabel_1);
 		
 		textField = new JTextField();
-		textField.setBounds(103, 59, 412, 30);
+		textField.setBounds(103, 68, 412, 30);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
@@ -180,6 +181,12 @@ public class RegisterCourse extends JFrame {
 		lblNewLabel_1_1_1_2_1_1_3_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_1_2_1_1_3_1.setBounds(348, 281, 74, 22);
 		contentPane.add(lblNewLabel_1_1_1_2_1_1_3_1);
+		
+		lblMess = new JLabel("");
+		lblMess.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		lblMess.setForeground(Color.WHITE);
+		lblMess.setBounds(127, 43, 361, 14);
+		contentPane.add(lblMess);
 	}
 	
 	public Classroom getInfoRoom() {
@@ -211,5 +218,9 @@ public class RegisterCourse extends JFrame {
 	
 	public void addGetInfoRoomListener(ActionListener listener) {
 		btnAddRoom.addActionListener(listener);
+	}
+	
+	public void setMess() {
+		lblMess.setText("Mã lớp học đã tồn tại");
 	}
 }

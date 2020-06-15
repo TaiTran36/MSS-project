@@ -153,7 +153,7 @@ public class Login extends JFrame {
            lblValidateLogin.setText("Ä�Äƒng nháº­p thÃ nh cÃ´ng!");
        }
 	   if(option < 1) {
-           lblValidateLogin.setText("TÃªn Ä‘Äƒng nháº­p hoáº·c máº­t kháº©u khÃ´ng Ä‘Ãºng. Vui lÃ²ng nháº­p láº¡i !");
+           lblValidateLogin.setText("Tên đăng nhập hoặc mật khẩu sai. Vui lòng nhập lại");
        }
     }
 

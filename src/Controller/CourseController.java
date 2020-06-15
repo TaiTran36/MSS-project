@@ -9,8 +9,10 @@ import javax.swing.event.ListSelectionListener;
 
 import Controller.ClassroomsController.AddRoomListener;
 import Controller.ClassroomsController.ClassroomListener;
-import DB.ClassroomDB;
-import DB.StudentDB;
+import Model.ClassroomDB;
+import Model.HeapSort;
+import Model.SortedArrayPriorityQueue;
+import Model.StudentDB;
 import View.CourseView;
 import View.PopupActionStudent;
 import View.PopupAddStudent;
@@ -31,6 +33,8 @@ public class CourseController {
 	        courseView.addEditStudentListener(new CourseListener());
 	        courseView.addAddStudentListener(new AddStuListener());
 	        courseView.addAttendanceStudentListener(new AttendanceStuListener());
+	        courseView.addSearchListener(new SearchStuListener());
+	        courseView.addShowListListener(new ListStuListener());
 	    }
 
 	    public void index(String code_root){
@@ -58,10 +62,41 @@ public class CourseController {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				LinkedList<Student> s = courseDB.getListClass(cr);
-				attendance = new PopupAttendance(s);
-				attendance.setVisible(true);
-				attendance.addCheckStudentListener(new AttendanceStudentListener());
+				
+			}
+	      
+	    }
+	    
+	    class ListStuListener implements ActionListener {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				SortedArrayPriorityQueue s = courseDB.getListClass(cr);
+				courseView.setEditStudent(s);
+			}
+	      
+	    }
+	    
+	    class SearchStuListener implements ActionListener {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				String name []= courseView.getNameSearch().split(" ");
+				if(!name.equals("")) {
+					SortedArrayPriorityQueue s = courseDB.getListClass(cr);
+					int index = courseDB.sreach(s, 0, s.size()-1, name[name.length-1].toLowerCase());
+					if(index == -1) {
+						courseView.setSearchMess("Tên sinh viên không được tìm thấy...");
+					}else {
+						Student st = (Student) s.get(index).getValue();
+						courseView.setSearchStudent(st);
+					}
+					
+				}else {
+					courseView.setSearchMess("Bạn cần nhập tên để tìm kiếm...");
+				}
 			}
 	      
 	    }
@@ -76,12 +111,9 @@ public class CourseController {
 			        return;
 			 }else {
 				 String [] arr = attendance.getValueStudent();
-				 System.out.println(arr[1]);
-				 System.out.println(cr);
-				 System.out.println((arr[0].equals("true"))?(1):0);
 				 courseDB = new StudentDB();
 				 courseDB.attendanceStudent(arr[1], cr, (arr[0].equals("true"))?(1):0 );
-				 LinkedList<Student> s = courseDB.getListClass(cr);
+				 SortedArrayPriorityQueue s = courseDB.getListClass(cr);
 				 courseView.setEditStudent(s);
 			 }
 				
@@ -109,7 +141,7 @@ public class CourseController {
 				std = popupView.getInfoStudent();
 				courseDB.addStudent(std, cr);
 				popupView.setVisible(false);
-				LinkedList<Student> s = courseDB.getListClass(cr);
+				SortedArrayPriorityQueue s = courseDB.getListClass(cr);
 				courseView.setEditStudent(s);
 				
 			}

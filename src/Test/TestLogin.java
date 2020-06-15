@@ -1,7 +1,7 @@
 package Test;
 
-import DB.AuthenticateDB;
 import Model.Authenticate;
+import Model.AuthenticateDB;
 
 public class TestLogin {
     public static void main(String[] args) {

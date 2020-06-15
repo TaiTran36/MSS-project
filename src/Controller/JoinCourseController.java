@@ -3,7 +3,7 @@ package Controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import DB.StudentDB;
+import Model.StudentDB;
 import View.CourseView;
 import View.JoinCourse;
 
