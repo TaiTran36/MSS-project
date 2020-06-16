@@ -62,7 +62,10 @@ public class CourseController {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
+				SortedArrayPriorityQueue s = courseDB.getListClass(cr);
+				attendance = new PopupAttendance(s);
+				attendance.setVisible(true);
+				attendance.addCheckStudentListener(new AttendanceStudentListener());
 			}
 	      
 	    }

@@ -75,7 +75,7 @@
         <course>
             <code_room>MAT02</code_room>
             <score>7.0</score>
-            <numOfAbsences>1</numOfAbsences>
+            <numOfAbsences>2</numOfAbsences>
             <scoreAttendance>7.0</scoreAttendance>
             <scoreMidTerm>8.0</scoreMidTerm>
             <scoreEndTerm>6.5</scoreEndTerm>
@@ -90,4 +90,4 @@
         </course>
     </student>
  
-<student id="16003420"><name>Nguyễn Văn An</name><code>16003420</code><dateOfBirth>25/07/1998</dateOfBirth><address>50 Nguyễn Trãi</address><course><code_room>MAT02</code_room><score>0.0</score><numOfAbsences>1</numOfAbsences><scoreAttendance>0.0</scoreAttendance><scoreMidTerm>0.0</scoreMidTerm><scoreEndTerm>0.0</scoreEndTerm></course></student></students>
+<student id="16003420"><name>Nguyễn Văn An</name><code>16003420</code><dateOfBirth>25/07/1998</dateOfBirth><address>50 Nguyễn Trãi</address><course><code_room>MAT02</code_room><score>0.0</score><numOfAbsences>2</numOfAbsences><scoreAttendance>0.0</scoreAttendance><scoreMidTerm>0.0</scoreMidTerm><scoreEndTerm>0.0</scoreEndTerm></course></student></students>
